@@ -13,3 +13,7 @@
   flex-direction: column;
   gap:5vw;
 }
+
+#info{
+    margin:3vw;
+}
