@@ -1,0 +1,12 @@
+#logoAlgrent {
+    width: 164px;
+    height: 74px;
+}
+
+header{
+    display: flex;
+    flex-direction: column;
+}
+.dropDown{
+    display: flex;
+}
