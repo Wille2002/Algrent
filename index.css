@@ -1,3 +1,7 @@
+body {
+    margin: 0;
+}
+
 #logoAlgrent {
     width: 164px;
     height: max-content;
