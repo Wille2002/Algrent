@@ -1,3 +1,9 @@
+#formContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 5vh;
+}
+
 .input {
     width: 42vw;
     height: 4.5vh;
@@ -5,9 +11,10 @@
     background: #F6F6F6;
     display: flex;
     align-items: center;
-    
+
 }
-.input > input{
+
+.input>input {
     border: none;
     background: #F6F6F6;
 }
@@ -22,7 +29,7 @@
 #inputContainer {
     display: flex;
     flex-direction: column;
-    gap: 5vw;
+    gap: 1vw;
 }
 
 
