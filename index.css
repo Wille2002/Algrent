@@ -21,3 +21,10 @@ header {
     font-weight: 400;
     line-height: normal;
 }
+
+.input{
+    width: 42vw;
+    height: 2.5vh;
+    border-radius: 5px;
+    background: #F6F6F6;
+}
