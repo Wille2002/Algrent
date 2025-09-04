@@ -1,3 +1,7 @@
+* {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
 #formContainer {
     display: flex;
     flex-direction: column;
@@ -17,6 +21,7 @@
 .input>input {
     border: none;
     background: #F6F6F6;
+    outline: none;
 }
 
 #info {
@@ -39,9 +44,18 @@
     gap: 1vw;
 }
 
-
-
 #formPage>img {
     height: 90%;
     width: 30vw;
+    height: 100%;
+}
+
+#beställKnapp button {
+    width: 12vw;
+    height: 4vw;
+    background: #589858;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 20px;
 }
