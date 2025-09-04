@@ -1,7 +1,7 @@
 document.getElementById("Form").addEventListener("click", e => {
     document.querySelector("main").innerHTML = `
         <div id="formPage">
-            <img src="" alt="">
+            <img src="../Algrent/img/algrentProdukt.png" alt="">
             <div id="formContainer">
 
                 <div id="info">Beställ Algrent i 5 litersdunkar för företag och organisationer genom att svara på
@@ -12,7 +12,7 @@ document.getElementById("Form").addEventListener("click", e => {
 
                 <div id="inputContainer">
                     <div class="input">
-                        <img src="../Algrent/algrentProdukt.png" alt="">
+                        <img src="" alt="">
                         <p>Bolagsnamn</p>
                     </div>
                     <div class="input">
