@@ -7,11 +7,15 @@
 
 #formPage {
     display: flex;
-    gap: 10vw;
 }
 
-#formContainer {
+#inputContainer {
+    margin: 3vw;
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 5vw;
+}
+
+#info {
+    margin: 3vw;
 }
