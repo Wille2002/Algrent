@@ -1,3 +1,7 @@
+*{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
 #formContainer {
     display: flex;
     flex-direction: column;
@@ -17,6 +21,7 @@
 .input>input {
     border: none;
     background: #F6F6F6;
+    outline: none;
 }
 
 #formPage {
