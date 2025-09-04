@@ -37,8 +37,16 @@
     gap: 1vw;
 }
 
-
-
 #formPage>img {
     height: 100%;
+}
+
+#beställKnapp button{
+    width: 12vw;
+    height: 4vw;
+    background: #589858;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 20px;
 }
