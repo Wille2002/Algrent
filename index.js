@@ -12,7 +12,7 @@ document.getElementById("Form").addEventListener("click", e => {
 
                 <div id="inputContainer">
                     <div class="input">
-                        <img src="" alt="">
+                        <img src="../Algrent/algrentProdukt.png" alt="">
                         <p>Bolagsnamn</p>
                     </div>
                     <div class="input">
