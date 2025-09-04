@@ -29,7 +29,8 @@ document.getElementById("Form").addEventListener("click", e => {
                         <p>Leveransaddress</p>
                     </div>
 
-                    <div class="Header">Orderinformation</div>
+                </div>
+                <div class="Header">Orderinformation</div>
 
                     <div class="input">
                         <img src="" alt="">
@@ -39,8 +40,6 @@ document.getElementById("Form").addEventListener("click", e => {
                     <div id="beställKnapp">
                         <button>Beställ</button>
                     </div>
-
-                </div>
             </div>
         </div>
     `;
