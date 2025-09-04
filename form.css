@@ -1,7 +1,14 @@
 .input {
     width: 42vw;
-    height: 2.5vh;
+    height: 4.5vh;
     border-radius: 5px;
+    background: #F6F6F6;
+    display: flex;
+    align-items: center;
+    
+}
+.input > input{
+    border: none;
     background: #F6F6F6;
 }
 
