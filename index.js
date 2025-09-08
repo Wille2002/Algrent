@@ -1,3 +1,4 @@
+
 document.getElementById("Form").addEventListener("click", e => {
     document.querySelector("main").innerHTML = `
         <div id="formPage">
@@ -89,13 +90,38 @@ document.getElementById("Form").addEventListener("click", e => {
         });
       
         document.getElementById("bekräftaKnapp").addEventListener("click", () => {
-          alert("Tack! Din order är bekräftad ✅");
+          alert("Tack! Din order är bekräftad!");
+           // 1. Hämta input-värden från formuläret
+            const bolagsnamn = document.getElementById("bolagsnamn")?.value;
+            const orgnummer = document.getElementById("organisationsnummer")?.value;
+            const address = document.getElementById("address")?.value;
+            const leveransaddress = document.getElementById("leveransaddress")?.value;
+            const amount = document.getElementById("amount")?.value;
+
+        // 2. Skicka mejl med EmailJS
+            emailjs.send("service_oki3txp", "template_1fr7qji", {
+            bolagsnamn: bolagsnamn,
+            orgnummer: orgnummer,
+            address: address,
+            leveransaddress: leveransaddress,
+            amount: amount
+        })
+            .then(() => {
+                alert("Beställningen har skickats!");
+                // Återställ sidan eller visa tackmeddelande
+            })
+            .catch(error => {
+                console.error("Något gick fel:", error);
+                alert("Fel vid skickande av mejl. Försök igen.");
+            });
           
         });
       });
       
         
     })
+
+   
     
 
 
