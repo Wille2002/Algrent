@@ -6,10 +6,10 @@
     display: flex;
     flex-direction: column;
     gap: 5vh;
+    width: 60%;
 }
 
 .input {
-    width: 42vw;
     height: 4.5vh;
     border-radius: 5px;
     background: #F6F6F6;
@@ -34,7 +34,6 @@
     align-items: center;
     height: 90vh;
     width: 100vw;
-    gap: 3vw;
 }
 
 
@@ -46,8 +45,12 @@
 
 #formPage>img {
     height: 90%;
-    width: 30vw;
-    height: 100%;
+    width: 25%;
+}
+
+#beställKnapp {
+    display: flex;
+    justify-content: flex-end;
 }
 
 #beställKnapp button {
