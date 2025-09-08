@@ -132,10 +132,6 @@ document.getElementById("bekräftaKnapp").addEventListener("click", () => {
     alert("Tack! Din order är bekräftad ✅");
 
 });
-      });
-      
-        
-    })
 
 
 
