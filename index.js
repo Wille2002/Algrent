@@ -44,17 +44,47 @@ document.getElementById("Form").addEventListener("click", e => {
     `;
 
     document.getElementById("beställKnapp").addEventListener("click", e => {
-       document.querySelector("main").innerHTML = `
-       <div class="confirmOrder">
-            <p id="confirm" >Stämmer denna informationen</p>
-            <p>Bolagsnamn</p>
-            <p>Organisationsnummer</p>
-            <p>Address</p>
-            <p>Leveransaddress</p>
-            
-       </div>`
-        
+
+        document.getElementById("beställKnapp").addEventListener("click", e => {
+            document.querySelector("main").innerHTML = `
+           <div class="confirmOrder">
+                <p id="confirm" >Stämmer denna informationen</p>
+                <p>Bolagsnamn</p>
+                <p>Organisationsnummer</p>
+                <p>Address</p>
+                <p>Leveransaddress</p>
+                <button id="confirmButton">Bekräfta</button>
+           </div>
+        `;
+
+            document.getElementById("confirmButton").addEventListener("click", () => {
+                // 1. Hämta input-värden från formuläret
+                const bolagsnamn = document.getElementById("bolagsnamn")?.value;
+                const orgnummer = document.getElementById("organisationsnummer")?.value;
+                const address = document.getElementById("address")?.value;
+                const leveransaddress = document.getElementById("leveransaddress")?.value;
+                const amount = document.getElementById("amount")?.value;
+
+                // 2. Skicka mejl med EmailJS
+                emailjs.send("service_oki3txp", "template_1fr7qji", {
+                    bolagsnamn: bolagsnamn,
+                    orgnummer: orgnummer,
+                    address: address,
+                    leveransaddress: leveransaddress,
+                    amount: amount
+                })
+                    .then(() => {
+                        alert("Beställningen har skickats!");
+                        // Återställ sidan eller visa tackmeddelande
+                    })
+                    .catch(error => {
+                        console.error("Något gick fel:", error);
+                        alert("Fel vid skickande av mejl. Försök igen.");
+                    });
+            });
+        });
+
     })
-    
+
 })
 
