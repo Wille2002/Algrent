@@ -78,4 +78,11 @@ header {
 .MellanstoraBilder>img {
     width: 35vw;
     height: 60vh;
-}
+
+    .läsMer {
+        color: #589858;
+        font-size: 1.5vw;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+    }
