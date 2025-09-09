@@ -1,4 +1,10 @@
-function sendMail(e) {
+let bolagsnamn;
+let orgNr;       
+let address;
+let leveransaddress;
+let antal;
+
+function orderPage(e) {
     document.querySelector("main").innerHTML = `
 <div id="formPage">
     <img src="../Algrent/img/algrentProdukt.png" alt="">
@@ -42,84 +48,75 @@ function sendMail(e) {
     </div>
 </div>
 `;
-
-    let bolagsnamn;
-    let orgNr;
-    let address;
-    let leveransaddress;
-    let antal;
-
-    document.getElementById("beställKnapp").addEventListener("click", e => {
-
+    document.getElementById("beställKnapp").addEventListener("click", showForm);
+}
+    
+    function showForm(e){
         e.preventDefault();
-
         bolagsnamn = document.getElementById("bolagsnamn").value;
         orgNr = document.getElementById("orgNr").value;
         address = document.getElementById("address").value;
         leveransaddress = document.getElementById("leveransaddress").value;
         antal = document.getElementById("antal").value;
 
-
         document.querySelector("main").innerHTML = `
-  <div class="container">
-    <h1>Bekräfta Order</h1>
-    <p>Är informationen korrekt?</p>
+        <div class="container">
+            <h1>Bekräfta Order</h1>
+            <p>Är informationen korrekt?</p>
 
-    <div class="order-card">
-      <h3>Bolagsnamn</h3>
-      <p>${bolagsnamn}</p>
+            <div class="order-card">
+            <h3>Bolagsnamn</h3>
+            <p>${bolagsnamn}</p>
 
-      <h3>Organisationsnummer</h3>
-      <p>${orgNr}</p>
+            <h3>Organisationsnummer</h3>
+            <p>${orgNr}</p>
 
-      <h3>Address</h3>
-      <p>${address}</p>
+            <h3>Address</h3>
+            <p>${address}</p>
 
-      <h3>Leveransadress</h3>
-      <p>${leveransaddress}</p>
+            <h3>Leveransadress</h3>
+            <p>${leveransaddress}</p>
 
-      <h3>Antal dunkar (5L)</h3>
-      <p>${antal}</p>
-    </div>
+            <h3>Antal dunkar (5L)</h3>
+            <p>${antal}</p>
+        </div>
 
-    <div class="button-group">
-      <button class="back" id="tillbakaKnapp">Tillbaka</button>
-      <button class="confirm" id="bekräftaKnapp">Bekräfta</button>
-    </div>
-  </div>
-`;
+        <div class="button-group">
+            <button class="back" id="tillbakaKnapp">Tillbaka</button>
+            <button class="confirm" id="bekräftaKnapp">Bekräfta</button>
+        </div>
+        </div>`;
 
 
         document.getElementById("tillbakaKnapp").addEventListener("click", () => {
             location.reload();
         });
 
-        document.getElementById("bekräftaKnapp").addEventListener("click", () => {
-            alert("Tack! Din order är bekräftad!");
+        document.getElementById("bekräftaKnapp").addEventListener("click", sendMail)
+    };
 
-            emailjs.send("", "", {
-                order_id: 1,
-                orders: 1,
-                bolagsnamn: bolagsnamn,
-                orgNr: orgNr,
-                address: address,
-                leveransaddress: leveransaddress,
-                antal: antal,
-                price: "--",
-                cost: "--",
-                email: ""
+    function sendMail(e){
+        alert("Tack! Din order är bekräftad!");
+
+        emailjs.send("serviceoki3txp", "template_1fr7qji", {
+            order_id: 1,
+            orders: 1,
+            bolagsnamn: bolagsnamn,
+            orgNr: orgNr,
+            address: address,
+            leveransaddress: leveransaddress,
+            antal: antal,
+            price: "--",
+            cost: "--",
+            email: "muficcalle@gmail.com"
+        })
+            .then(() => {
             })
-                .then(() => {
-                })
-                .catch(error => {
-                    console.error("Något gick fel:", error);
-                    alert("Fel vid skickande av mejl. Försök igen.");
-                });
+            .catch(error => {
+                console.error("Något gick fel:", error);
+                alert("Fel vid skickande av mejl. Försök igen.");
+            });
 
-            alert("Tack! Din order är bekräftad!");
+        alert("Tack! Din order är bekräftad!");
 
-        });
-
-    });
-
-}
+    };
