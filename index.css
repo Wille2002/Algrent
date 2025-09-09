@@ -1,5 +1,3 @@
-
-
 body {
     margin: 0;
 }
@@ -26,4 +24,58 @@ header {
     font-style: normal;
     font-weight: 400;
     line-height: normal;
+}
+
+#startingPage {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100vw;
+    gap: 60px;
+}
+
+#startImg {
+    width: 100%;
+}
+
+#startImg>img {
+    width: 100%;
+}
+
+#infoFrontPage {
+    font-size: 2.3vw;
+    text-align: center;
+    width: 60vw;
+}
+
+.containerInfo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    gap: 5vw;
+}
+
+.containerTxt {
+    display: flex;
+    justify-content: center;
+
+    flex-direction: column;
+    gap: 1vw;
+
+}
+
+.SemiheaderFPage {
+    font-size: 2.3vw;
+}
+
+.brödTxt {
+    font-size: 1.5vw;
+    width: 35vw;
+}
+
+.MellanstoraBilder>img {
+    width: 35vw;
+    height: 60vh;
 }
