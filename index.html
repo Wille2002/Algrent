@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="index.css">
     <link rel="stylesheet" href="form.css">
     <title>ALGRENT</title>
-    
+
 </head>
 
 <body>
@@ -19,15 +19,19 @@
             <div id="Form">Beställ</div>
             <div>FaQ</div>
             <div>Rengör effektivt</div>
-            
+
         </div>
     </header>
     <main></main>
-    <script src="index.js"></script>
-    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
-    <script>
-        emailjs.init("drtTozGfAaoh1Xw4k"); // Ersätt med din EmailJS user ID
-    </script>
+
 </body>
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+<script src="index.js"></script>
+<script>
+    emailjs.init('');
+
+    document.getElementById("Form").addEventListener("click", sendMail);
+
+</script>
 
 </html>
