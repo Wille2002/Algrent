@@ -64,28 +64,29 @@ function showForm(e) {
             <h1>Bekräfta Order</h1>
             <p>Är informationen korrekt?</p>
 
-            <div class="order-card">
-            <h3>Bolagsnamn</h3>
-            <p>${bolagsnamn}</p>
+    <div class="order-card">
+      <h3>Bolagsnamn</h3>
+      <p>${bolagsnamn}</p>
 
-            <h3>Organisationsnummer</h3>
-            <p>${orgNr}</p>
+      <h3>Organisationsnummer</h3>
+      <p>${orgNr}</p>
 
-            <h3>Address</h3>
-            <p>${address}</p>
+      <h3>Address</h3>
+      <p>${address}</p>
 
-            <h3>Leveransadress</h3>
-            <p>${leveransaddress}</p>
+      <h3>Leveransadress</h3>
+      <p>${leveransaddress}</p>
 
-            <h3>Antal dunkar (5L)</h3>
-            <p>${antal}</p>
-        </div>
+      <h3>Antal dunkar (5L)</h3>
+      <p>${antal}</p>
+    </div>
 
-        <div class="button-group">
-            <button class="back" id="tillbakaKnapp">Tillbaka</button>
-            <button class="confirm" id="bekräftaKnapp">Bekräfta</button>
-        </div>
-        </div>`;
+    <div class="button-group">
+      <button class="back" id="tillbakaKnapp">Tillbaka</button>
+      <button class="confirm" id="bekräftaKnapp">Bekräfta</button>
+    </div>
+  </div>
+`;
 
 
     document.getElementById("tillbakaKnapp").addEventListener("click", () => {
