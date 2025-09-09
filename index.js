@@ -1,4 +1,10 @@
-function sendMail(e) {
+let bolagsnamn;
+let orgNr;
+let address;
+let leveransaddress;
+let antal;
+
+function orderPage(e) {
     document.querySelector("main").innerHTML = `
 <div id="formPage">
     <img src="../Algrent/img/algrentProdukt.png" alt="">
@@ -42,28 +48,21 @@ function sendMail(e) {
     </div>
 </div>
 `;
+    document.getElementById("beställKnapp").addEventListener("click", showForm);
+}
 
-    let bolagsnamn;
-    let orgNr;
-    let address;
-    let leveransaddress;
-    let antal;
+function showForm(e) {
+    e.preventDefault();
+    bolagsnamn = document.getElementById("bolagsnamn").value;
+    orgNr = document.getElementById("orgNr").value;
+    address = document.getElementById("address").value;
+    leveransaddress = document.getElementById("leveransaddress").value;
+    antal = document.getElementById("antal").value;
 
-    document.getElementById("beställKnapp").addEventListener("click", e => {
-
-        e.preventDefault();
-
-        bolagsnamn = document.getElementById("bolagsnamn").value;
-        orgNr = document.getElementById("orgNr").value;
-        address = document.getElementById("address").value;
-        leveransaddress = document.getElementById("leveransaddress").value;
-        antal = document.getElementById("antal").value;
-
-
-        document.querySelector("main").innerHTML = `
-  <div class="container">
-    <h1>Bekräfta Order</h1>
-    <p>Är informationen korrekt?</p>
+    document.querySelector("main").innerHTML = `
+        <div class="container">
+            <h1>Bekräfta Order</h1>
+            <p>Är informationen korrekt?</p>
 
     <div class="order-card">
       <h3>Bolagsnamn</h3>
@@ -90,36 +89,35 @@ function sendMail(e) {
 `;
 
 
-        document.getElementById("tillbakaKnapp").addEventListener("click", () => {
-            location.reload();
-        });
-
-        document.getElementById("bekräftaKnapp").addEventListener("click", () => {
-            alert("Tack! Din order är bekräftad!");
-
-            emailjs.send("", "", {
-                order_id: 1,
-                orders: 1,
-                bolagsnamn: bolagsnamn,
-                orgNr: orgNr,
-                address: address,
-                leveransaddress: leveransaddress,
-                antal: antal,
-                price: "--",
-                cost: "--",
-                email: ""
-            })
-                .then(() => {
-                })
-                .catch(error => {
-                    console.error("Något gick fel:", error);
-                    alert("Fel vid skickande av mejl. Försök igen.");
-                });
-
-            alert("Tack! Din order är bekräftad!");
-
-        });
-
+    document.getElementById("tillbakaKnapp").addEventListener("click", () => {
+        location.reload();
     });
 
-}
+    document.getElementById("bekräftaKnapp").addEventListener("click", sendMail)
+};
+
+function sendMail(e) {
+    alert("Tack! Din order är bekräftad!");
+
+    emailjs.send("", "", {
+        order_id: 1,
+        orders: 1,
+        bolagsnamn: bolagsnamn,
+        orgNr: orgNr,
+        address: address,
+        leveransaddress: leveransaddress,
+        antal: antal,
+        price: "--",
+        cost: "--",
+        email: ""
+    })
+        .then(() => {
+        })
+        .catch(error => {
+            console.error("Något gick fel:", error);
+            alert("Fel vid skickande av mejl. Försök igen.");
+        });
+
+    alert("Tack! Din order är bekräftad!");
+
+};
