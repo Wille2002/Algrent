@@ -32,7 +32,7 @@
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    height: 90vh;
+    height: 87vh;
     width: 100vw;
 }
 
@@ -63,12 +63,12 @@
     font-size: 20px;
 }
 
-main{
+main {
     display: flex;
     justify-content: center;
 }
 
-.confirmOrder{
+.confirmOrder {
     display: flex;
     width: 40vw;
     height: 65vh;
@@ -82,57 +82,57 @@ body {
     font-family: "Inter", Arial, sans-serif;
     background-color: #f9fcfb;
     color: #222;
-  }
-  
-  .container {
+}
+
+.container {
     width: 40vw;
     text-align: center;
     padding: 0 1vw;
-  }
-  
-  .container h1 {
+}
+
+.container h1 {
     font-size: 20px;
     font-weight: 600;
     color: #000000;
-  }
-  
-  .container p {
+}
+
+.container p {
     font-size: 20px;
     color: #555;
-  }
-  
- 
-  .order-card {
+}
+
+
+.order-card {
     background: #fff;
     border-radius: 16px;
     box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
     padding: 2vw;
     text-align: left;
-  }
-  
-  .order-card h3 {
+}
+
+.order-card h3 {
     font-size: 0.95rem;
     font-weight: 600;
-  }
-  
-  .order-card p {
+}
+
+.order-card p {
     font-size: 1rem;
     color: #333;
     margin-bottom: 1;
     padding: 1vw;
     background: #f4f9f7;
     border-radius: 6px;
-  }
-  
+}
 
-  .button-group {
+
+.button-group {
     display: flex;
     justify-content: center;
     gap: 1vw;
     margin-top: 1vw;
-  }
-  
-  button {
+}
+
+button {
     padding: 1vw;
     font-size: 20px;
     border-radius: 10px;
@@ -140,28 +140,27 @@ body {
     border: none;
     transition: all 0.2s ease-in-out;
     font-weight: 500;
-  }
-  
+}
 
-  button.back {
+
+button.back {
     background: #fff;
     border: 1.5px solid #ccc;
     color: #333;
-  }
-  
-  button.back:hover {
+}
+
+button.back:hover {
     border-color: #888;
     background: #f4f4f4;
-  }
-  
+}
 
-  button.confirm {
+
+button.confirm {
     background: #1c7c4b;
     color: #fff;
     box-shadow: 0 4px 10px rgba(28, 124, 75, 0.25);
-  }
-  
-  button.confirm:hover {
+}
+
+button.confirm:hover {
     background: #145c37;
-  }
-  
+}
