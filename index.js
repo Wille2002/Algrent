@@ -121,3 +121,17 @@ function sendMail(e) {
     alert("Tack! Din order är bekräftad!");
 
 };
+
+
+function ShowDropDownMenu(array) {
+
+    let dropDownContainer = document.createElement("div");
+    dropDownContainer.classList.add("dropDownContainer");
+
+    array.forEach(element => {
+        let dropDownElements = document.createElement("div");
+        dropDownElements.classList.add("drowDownElement");
+        dropDownElements.textContent = element;
+        dropDownContainer.append(dropDownElements);
+    });
+}
