@@ -135,3 +135,31 @@ function ShowDropDownMenu(array) {
         dropDownContainer.append(dropDownElements);
     });
 }
+document.querySelector(".dropDownMenu").addEventListener("mouseover", e => {
+    selectDropDownMenu(e.target.innerHTML)
+})
+
+function selectDropDownMenu(menuText) {
+    let infoArray = [];
+    switch (menuText) {
+        case "Om oss":
+            infoArray = ["Leverans", "Återförsäljare", "B2B"];
+            break;
+        case "Produkten":
+            infoArray = ["Algrent", "Algrent PROFFS"]
+            break;
+
+        case "Beställ":
+
+            break;
+
+        case "FaQ":
+            infoArray = ["Kundrecensioner", "Blogg", "Valför algrent"]
+            break;
+
+        case "Rengör effektivt":
+            infoArray = ["Tvätta tak", "Tvätta altan", "Fasadtvätt", "Tvätta markis", "Rengör utemöbler"]
+            break;
+    }
+    showDropDownMenu(infoArray);
+}
