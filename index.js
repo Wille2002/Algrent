@@ -124,14 +124,16 @@ function sendMail(e) {
 
 
 function showDropDownMenu(array, menuText) {
+    const existing = document.querySelector(".dropDownContainer");
+    if (existing) existing.remove();
+
     let dropDownContainer = document.createElement("div");
     dropDownContainer.classList.add("dropDownContainer");
 
     document.querySelectorAll(".dropDownMenu").forEach(el => {
-        if (el.textContent.trim() === menuText) {
+        if (el.textContent === menuText) {
 
             el.appendChild(dropDownContainer);
-
 
             array.forEach(item => {
                 let dropDownElement = document.createElement("div");
@@ -139,15 +141,21 @@ function showDropDownMenu(array, menuText) {
                 dropDownElement.textContent = item;
                 dropDownContainer.appendChild(dropDownElement);
             });
+
+            el.addEventListener("mouseleave", () => {
+                dropDownContainer.remove();
+            });
         }
     });
 }
 
 document.querySelectorAll(".dropDownMenu").forEach(el => {
-    el.addEventListener("mouseover", e => {
+    el.addEventListener("mouseenter", e => {
         selectDropDownMenu(e.target.innerHTML);
     });
 });
+
+
 
 function selectDropDownMenu(menuText) {
 

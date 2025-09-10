@@ -33,7 +33,7 @@ header {
     line-height: normal;
 }
 
-.dropDown>div:hover {
+.dropDownMenu:hover {
     color: #589858;
 }
 
@@ -110,9 +110,9 @@ footer {
     width: 100vw;
 }
 
-.dropDownContainer{
+.dropDownContainer {
     position: absolute;
-    gap:10px;
+    gap: 10px;
     top: 90px;
     display: flex;
     flex-direction: column;
