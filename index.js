@@ -124,16 +124,14 @@ function sendMail(e) {
 
 
 function showDropDownMenu(array, menuText) {
-    const existing = document.querySelector(".dropDownContainer");
-    if (existing) existing.remove();
+    // Rensa tidigare dropdowns
+    document.querySelectorAll(".dropDownContainer").forEach(el => el.remove());
 
-    let dropDownContainer = document.createElement("div");
-    dropDownContainer.classList.add("dropDownContainer");
-
-    document.querySelectorAll(".dropDownMenu").forEach(el => {
-        if (el.textContent === menuText) {
-
-            el.appendChild(dropDownContainer);
+    document.querySelectorAll(".menuItem").forEach(el => {
+        let menu = el.querySelector(".dropDownMenu");
+        if (menu && menu.textContent.trim() === menuText.trim()) {
+            let dropDownContainer = document.createElement("div");
+            dropDownContainer.classList.add("dropDownContainer");
 
             array.forEach(item => {
                 let dropDownElement = document.createElement("div");
@@ -142,44 +140,37 @@ function showDropDownMenu(array, menuText) {
                 dropDownContainer.appendChild(dropDownElement);
             });
 
-            el.addEventListener("mouseleave", () => {
-                dropDownContainer.remove();
-            });
+            el.appendChild(dropDownContainer);
         }
     });
 }
 
-document.querySelectorAll(".dropDownMenu").forEach(el => {
-    el.addEventListener("mouseenter", e => {
-        selectDropDownMenu(e.target.innerHTML);
-    });
-});
-
-
-
 function selectDropDownMenu(menuText) {
-
-
     let infoArray = [];
-    switch (menuText) {
+
+    switch (menuText.trim()) {
         case "Om oss":
             infoArray = ["Leverans", "Återförsäljare", "B2B"];
             break;
         case "Produkten":
-            infoArray = ["Algrent", "Algrent PROFFS"]
+            infoArray = ["Algrent", "Algrent PROFFS"];
             break;
-
-        case "Beställ":
-
-            break;
-
         case "FaQ":
-            infoArray = ["Kundrecensioner", "Blogg", "Valför algrent"]
+            infoArray = ["Kundrecensioner", "Blogg", "Varför Algrent"];
             break;
-
         case "Rengör effektivt":
-            infoArray = ["Tvätta tak", "Tvätta altan", "Fasadtvätt", "Tvätta markis", "Rengör utemöbler"]
+            infoArray = ["Tvätta tak", "Tvätta altan", "Fasadtvätt", "Tvätta markis", "Rengör utemöbler"];
             break;
+        default:
+            return;
     }
+
     showDropDownMenu(infoArray, menuText);
 }
+
+// Eventlistener på hover
+document.querySelectorAll(".dropDownMenu").forEach(el => {
+    el.addEventListener("mouseenter", e => {
+        selectDropDownMenu(e.target.textContent);
+    });
+});
