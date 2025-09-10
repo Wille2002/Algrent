@@ -167,9 +167,24 @@ function selectDropDownMenu(menuText) {
     showDropDownMenu(infoArray, menuText);
 }
 
-// Eventlistener på hover
 document.querySelectorAll(".dropDownMenu").forEach(el => {
     el.addEventListener("mouseenter", e => {
         selectDropDownMenu(e.target.textContent);
     });
 });
+
+const reveals = document.querySelectorAll(".scroll-reveal");
+
+function revealOnScroll() {
+    reveals.forEach(el => {
+        const rect = el.getBoundingClientRect();
+        const isVisible = rect.top < window.innerHeight - 100;
+
+        if (isVisible) {
+            el.classList.add("visible");
+        }
+    });
+}
+
+window.addEventListener("scroll", revealOnScroll);
+window.addEventListener("load", revealOnScroll);
