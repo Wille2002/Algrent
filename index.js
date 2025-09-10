@@ -124,7 +124,6 @@ function sendMail(e) {
 
 
 function showDropDownMenu(array, menuText) {
-    // Rensa tidigare dropdowns
     document.querySelectorAll(".dropDownContainer").forEach(el => el.remove());
 
     document.querySelectorAll(".menuItem").forEach(el => {
