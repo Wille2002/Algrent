@@ -109,3 +109,11 @@ footer {
     height: 50vh;
     width: 100vw;
 }
+
+.dropDownContainer{
+    position: absolute;
+    gap:10px;
+    top: 90px;
+    display: flex;
+    flex-direction: column;
+}
