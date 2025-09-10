@@ -123,23 +123,35 @@ function sendMail(e) {
 };
 
 
-function ShowDropDownMenu(array) {
-
+function showDropDownMenu(array, menuText) {
     let dropDownContainer = document.createElement("div");
     dropDownContainer.classList.add("dropDownContainer");
 
-    array.forEach(element => {
-        let dropDownElements = document.createElement("div");
-        dropDownElements.classList.add("drowDownElement");
-        dropDownElements.textContent = element;
-        dropDownContainer.append(dropDownElements);
+    document.querySelectorAll(".dropDownMenu").forEach(el => {
+        if (el.textContent.trim() === menuText) {
+
+            el.appendChild(dropDownContainer);
+
+
+            array.forEach(item => {
+                let dropDownElement = document.createElement("div");
+                dropDownElement.classList.add("dropDownElement");
+                dropDownElement.textContent = item;
+                dropDownContainer.appendChild(dropDownElement);
+            });
+        }
     });
 }
-document.querySelector(".dropDownMenu").addEventListener("mouseover", e => {
-    selectDropDownMenu(e.target.innerHTML)
-})
+
+document.querySelectorAll(".dropDownMenu").forEach(el => {
+    el.addEventListener("mouseover", e => {
+        selectDropDownMenu(e.target.innerHTML);
+    });
+});
 
 function selectDropDownMenu(menuText) {
+
+
     let infoArray = [];
     switch (menuText) {
         case "Om oss":
@@ -161,5 +173,5 @@ function selectDropDownMenu(menuText) {
             infoArray = ["Tvätta tak", "Tvätta altan", "Fasadtvätt", "Tvätta markis", "Rengör utemöbler"]
             break;
     }
-    showDropDownMenu(infoArray);
+    showDropDownMenu(infoArray, menuText);
 }
