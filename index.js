@@ -151,9 +151,6 @@ function selectDropDownMenu(menuText) {
         case "Om oss":
             infoArray = ["Leverans", "Återförsäljare", "B2B"];
             break;
-        case "Produkten":
-            infoArray = ["Algrent", "Algrent PROFFS"];
-            break;
         case "FaQ":
             infoArray = ["Kundrecensioner", "Blogg", "Varför Algrent"];
             break;
