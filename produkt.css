@@ -1,18 +1,22 @@
 #containerProdukt {
     display: flex;
     flex-direction: column;
-    gap: 15vh;
+    gap: 5vh;
+    background-color: #f8faf9;
+    justify-content: center;
+    width: 90vw;
 }
 
 #containerTopProdukt {
     display: flex;
     justify-content: center;
-    height: 50vh;
+    height: 70vh;
     flex-direction: row;
+    gap: 10%;
 }
 
 #imgDiv {
-    width: 50vw;
+    width: 45%;
     height: 100%;
 }
 
@@ -24,6 +28,20 @@
 #TopRightDiv {
     display: flex;
     flex-direction: column;
+    width: 45%;
+    gap: 5%;
+}
+
+#TopRightDiv>h1 {
+    color: #14532d;
+}
+
+#TopRightDiv>p {
+    color: #166534;
+}
+
+#TopRightDiv>button {
+    color: #166534;
 }
 
 #produktFakta {
@@ -31,18 +49,28 @@
     flex-direction: column;
 }
 
+#produktFakta>h1 {
+    color: #14532d;
+}
 
+#faktaContainer {
+    display: flex;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    padding: 10px;
+}
 
 #fakta1 {
     display: flex;
-    justify-content: center;
-    align-items: center;
+    justify-content: space-evenly;
     width: 100%;
+    flex-direction: column;
 }
 
 #fakta2 {
     display: flex;
-    justify-content: center;
-    align-items: center;
+    justify-content: space-evenly;
     width: 100%;
+    flex-direction: column;
 }

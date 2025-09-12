@@ -209,14 +209,14 @@ document.querySelector("#produktKnapp").addEventListener("click", e => {
                                     <p>1l -> ca 100 m2 (21 l färdig lösning)</p>
                                 </div>
                                 <div>
-                                    <p>Varaktighet</p>
-                                    <p>Upp till 5 år</p>
+                                    <p>Miljö</p>
+                                    <p>Biologiskt nedbrytbar</p>
                                 </div>
                             </div>
                             <div id="fakta2">
                                 <div>
-                                    <p>Miljö</p>
-                                    <p>Biologiskt nedbrytbar</p>
+                                <p>Varaktighet</p>
+                                    <p>Upp till 5 år</p>
                                 </div>
                                 <div>
                                     <p>Ytor</p>
