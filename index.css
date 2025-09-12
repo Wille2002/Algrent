@@ -17,16 +17,10 @@ header {
     gap: 36vw;
     position: sticky;
     top: 0;
-    align-items: center;
-    background: transparent;
-    transition: background-color 0.3s ease, box-shadow 0.3s ease;
-    z-index: 1000;
-
+    z-index: 1;
 }
-header.scrolled {
-    background: #fff; /* or rgba(255,255,255,0.95) for subtle transparency */
-    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
-  }
+
+
 
 .dropDown {
     display: flex;
