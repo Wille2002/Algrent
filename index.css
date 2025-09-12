@@ -20,6 +20,12 @@ header {
     z-index: 1;
 }
 
+header.scrolled {
+    background: #fff;
+    /* or rgba(255,255,255,0.95) for subtle transparency */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
 .dropDown {
     display: flex;
     width: 50vw;
@@ -128,7 +134,7 @@ footer {
     gap: 10px;
 
     background: white;
-    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
     padding: 10px 0;
     min-width: 150px;
     z-index: 10;
