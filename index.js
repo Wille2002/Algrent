@@ -230,9 +230,9 @@ document.querySelector("#produktKnapp").addEventListener("click", e => {
                 </div>
             </div>
             <div id="containerMidProdukt">
-                <div>
-                    <img src="/img/frontPageDemo.png" alt="">
-                    <img src="/img/frontPageImg.png" alt="">
+                <div class="productImages">
+                    <img class="productImg" src="img/frontPageDemo.png" alt="">
+                    <img class="productImg" src="img/frontPageImg.png" alt="">
                 </div>
                 <div>
                     <div>
@@ -243,11 +243,11 @@ document.querySelector("#produktKnapp").addEventListener("click", e => {
                     </div>
                     <div>
                         <h1>Fakta och användning</h1>
-                        <p>
-                            Passar på tak, fasader, stenplattor, tegel, trä m.m.
-                            Appliceras med lågtrycksspruta, borste eller pensel
-                            Bäst effekt vid temperatur över +5 °C och torrt väder
-                        </p>
+                        <ul>
+                            <li>Passar på tak, fasader, stenplattor, tegel, trä m.m.</li>
+                            <li>Appliceras med lågtrycksspruta, borste eller pensel</li>
+                            <li>Bäst effekt vid temperatur över +5 °C och torrt väder</li>
+                        </ul>
                     </div>
                     <div>
                         <h1>Användarinstruktion</h1>
@@ -255,6 +255,7 @@ document.querySelector("#produktKnapp").addEventListener("click", e => {
                             spola bort. Alger och mossa dör inom några dagar; synligt resultat normalt inom 1–2 veckor
                             beroende på väder och mängd organiskt material. </p>
                     </div>
+                </div>
                 </div>
                 <div id="containerMidBotProdukt">
                     <h1>Vanliga frågor</h1>

@@ -176,3 +176,22 @@ footer {
     display: flex;
     align-self: center;
 }
+
+#containerMidProdukt{
+   display: flex;
+   width: 90vw;
+   gap: 3vw;
+}
+
+#containerMidProdukt h1{
+    color: #14532D;
+ }
+
+.productImg{
+    width: 200px;
+    border-radius: 5px;
+}
+.productImages{
+    display: flex;
+    gap: 1vw;
+}
