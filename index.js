@@ -231,7 +231,7 @@ document.querySelector("#produktKnapp").addEventListener("click", e => {
             </div>
             <div id="containerMidProdukt">
                 
-                <div>
+                <div id="midLeft">
                     <div>
                         <h1>Så fungerar Algrent Proffs</h1>
                         <p>Algrent Proffs är utvecklad för effektiv sanering av alger, mossa, svartmögel och lavar. Med
