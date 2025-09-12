@@ -1,0 +1,48 @@
+#containerProdukt {
+    display: flex;
+    flex-direction: column;
+    gap: 15vh;
+}
+
+#containerTopProdukt {
+    display: flex;
+    justify-content: center;
+    height: 50vh;
+    flex-direction: row;
+}
+
+#imgDiv {
+    width: 50vw;
+    height: 100%;
+}
+
+#imgDiv>img {
+    height: 100%;
+    width: 100%;
+}
+
+#TopRightDiv {
+    display: flex;
+    flex-direction: column;
+}
+
+#produktFakta {
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+#fakta1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+#fakta2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}

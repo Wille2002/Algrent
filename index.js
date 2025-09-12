@@ -188,3 +188,99 @@ function revealOnScroll() {
 
 window.addEventListener("scroll", revealOnScroll);
 window.addEventListener("load", revealOnScroll);
+
+
+document.querySelector("#produktKnapp").addEventListener("click", e => {
+    document.querySelector("main").innerHTML = `
+       <div id="containerProdukt">
+            <div id="containerTopProdukt">
+                <div id="imgDiv">
+                    <img src="./img/algrentProdukt.png" alt="">
+                </div>
+                <div id="TopRightDiv">
+                    <h1> Algrent Proffs</h1>
+                    <p>Professionell sanering av alger, mossa & svartmögel</p>
+                    <div id="produktFakta">
+                        <h1>Snabb Produktfakta</h1>
+                        <div id="faktaContainer">
+                            <div id="fakta1">
+                                <div>
+                                    <p>Räcker till</p>
+                                    <p>1l -> ca 100 m2 (21 l färdig lösning)</p>
+                                </div>
+                                <div>
+                                    <p>Varaktighet</p>
+                                    <p>Upp till 5 år</p>
+                                </div>
+                            </div>
+                            <div id="fakta2">
+                                <div>
+                                    <p>Miljö</p>
+                                    <p>Biologiskt nedbrytbar</p>
+                                </div>
+                                <div>
+                                    <p>Ytor</p>
+                                    <p>Tak, fasader, stenplattor m.m</p>
+                                </div>
+                            </div>
+
+                        </div>
+                        </div>
+                    <button>Hämta säkerhetsblad(PDF)</button>
+                </div>
+            </div>
+            <div id="containerMidProdukt">
+                <div>
+                    <img src="/img/frontPageDemo.png" alt="">
+                    <img src="/img/frontPageImg.png" alt="">
+                </div>
+                <div>
+                    <div>
+                        <h1>Så fungerar Algrent Proffs</h1>
+                        <p>Algrent Proffs är utvecklad för effektiv sanering av alger, mossa, svartmögel och lavar. Med
+                            ett långvarigt skydd (upp till 5 år) lämpar den sig för tak, fasader, stenplattor och flera
+                            andra hårda ytor. Produkten är biologiskt nedbrytbar och lätt att applicera. </p>
+                    </div>
+                    <div>
+                        <h1>Fakta och användning</h1>
+                        <p>
+                            Passar på tak, fasader, stenplattor, tegel, trä m.m.
+                            Appliceras med lågtrycksspruta, borste eller pensel
+                            Bäst effekt vid temperatur över +5 °C och torrt väder
+                        </p>
+                    </div>
+                    <div>
+                        <h1>Användarinstruktion</h1>
+                        <p>Blanda enligt rekommendation på etiketten. Applicera jämnt över ytan och låt verka utan att
+                            spola bort. Alger och mossa dör inom några dagar; synligt resultat normalt inom 1–2 veckor
+                            beroende på väder och mängd organiskt material. </p>
+                    </div>
+                </div>
+                <div id="containerMidBotProdukt">
+                    <h1>Vanliga frågor</h1>
+                    <div>
+                        <div>
+                            <p>Hur appliceras produkten?</p>
+                            <div>+</div>
+                        </div>
+                        <div>
+                            <p>Hur långt tid tar det innan man ser resultat</p>
+                            <div>+</div>
+                        </div>
+                        <div>
+                            <p>Är den skadlig för växter?</p>
+                            <div>+</div>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <h1>Säkerhet & nedladdningar</h1>
+                    <p>Se säkerhetsdatabladet för fullständiga anvisningar om hantering, förvaring och personlig
+                        skyddsutrustning.</p>
+                    <p>Hämta säkerhetsdatablad (PDF)</p>
+                </div>
+
+            </div>
+        </div>
+    `
+})
