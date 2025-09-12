@@ -230,10 +230,7 @@ document.querySelector("#produktKnapp").addEventListener("click", e => {
                 </div>
             </div>
             <div id="containerMidProdukt">
-                <div class="productImages">
-                    <img class="productImg" src="img/frontPageDemo.png" alt="">
-                    <img class="productImg" src="img/frontPageImg.png" alt="">
-                </div>
+                
                 <div>
                     <div>
                         <h1>Så fungerar Algrent Proffs</h1>
@@ -255,6 +252,11 @@ document.querySelector("#produktKnapp").addEventListener("click", e => {
                             spola bort. Alger och mossa dör inom några dagar; synligt resultat normalt inom 1–2 veckor
                             beroende på väder och mängd organiskt material. </p>
                     </div>
+                    
+                </div>
+                <div class="productImages">
+                    <img class="productImg" src="img/frontPageDemo.png" alt="">
+                    <img class="productImg" src="img/frontPageImg.png" alt="">
                 </div>
                 </div>
                 <div id="containerMidBotProdukt">
