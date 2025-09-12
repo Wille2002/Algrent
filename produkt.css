@@ -30,14 +30,17 @@
     flex-direction: column;
     width: 45%;
     gap: 5%;
+    justify-content: space-evenly;
 }
 
 #TopRightDiv>h1 {
     color: #14532d;
+    margin: 0;
 }
 
 #TopRightDiv>p {
     color: #166534;
+    margin: 0;
 }
 
 #TopRightDiv>button {
@@ -51,6 +54,7 @@
 
 #produktFakta>h1 {
     color: #14532d;
+    margin: 0;
 }
 
 #faktaContainer {
