@@ -80,7 +80,7 @@
 }
 
 
-#containerMidProdukt{
+#containerMidProdukt {
     display: flex;
     width: 90vw;
     gap: 3vw;
@@ -127,4 +127,34 @@
 
   .faqIcon:active{       
      transform: rotate(45deg);
-  }
+  
+    height: 70vh;
+}
+
+#midLeft {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: center;
+}
+
+#containerMidProdukt h1 {
+    color: #14532D;
+}
+
+.productImages {
+    width: 50%;
+}
+
+.productImg {
+    width: 100%;
+    border-radius: 5px;
+    height: 100%;
+}
+
+.productImages {
+    display: flex;
+    gap: 1vw;
+
+}

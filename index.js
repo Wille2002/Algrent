@@ -151,9 +151,6 @@ function selectDropDownMenu(menuText) {
         case "Om oss":
             infoArray = ["Leverans", "Återförsäljare", "B2B"];
             break;
-        case "Produkten":
-            infoArray = ["Algrent", "Algrent PROFFS"];
-            break;
         case "FaQ":
             infoArray = ["Kundrecensioner", "Blogg", "Varför Algrent"];
             break;
@@ -231,7 +228,7 @@ document.querySelector("#produktKnapp").addEventListener("click", e => {
             </div>
             <div id="containerMidProdukt">
                 
-                <div>
+                <div id="midLeft">
                     <div>
                         <h1>Så fungerar Algrent Proffs</h1>
                         <p>Algrent Proffs är utvecklad för effektiv sanering av alger, mossa, svartmögel och lavar. Med
@@ -293,12 +290,14 @@ document.querySelector("#produktKnapp").addEventListener("click", e => {
 
     faqItems.forEach(item => {
       item.addEventListener("click", () => {
-        // Stäng andra öppna frågor
+        
         faqItems.forEach(el => {
           if (el !== item) el.classList.remove("active");
         });
-        // Växla på klickad
+      
         item.classList.toggle("active");
       });
     });
+    
+    window.scrollTo(0, 0);
 })
