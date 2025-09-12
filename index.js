@@ -262,17 +262,20 @@ document.querySelector("#produktKnapp").addEventListener("click", e => {
                 <div id="containerMidBotProdukt">
                     <h1>Vanliga frågor</h1>
                     <div>
-                        <div>
+                        <div class="faqItem">
                             <p>Hur appliceras produkten?</p>
-                            <div>+</div>
+                            <div class="faqIcon">+</div>
+                            <div class="faqAnswer"> LALALAL</div>
                         </div>
-                        <div>
+                        <div class="faqItem">
                             <p>Hur långt tid tar det innan man ser resultat</p>
-                            <div>+</div>
+                            <div class="faqIcon">+</div>
+                            <div class="faqAnswer">FEFWF</div>
                         </div>
-                        <div>
+                        <div class="faqItem">
                             <p>Är den skadlig för växter?</p>
-                            <div>+</div>
+                            <div class="faqIcon">+</div>
+                            <div class="faqAnswer">WDOQDQ</div>
                         </div>
                     </div>
                 </div>
@@ -286,4 +289,16 @@ document.querySelector("#produktKnapp").addEventListener("click", e => {
             </div>
         </div>
     `
+    const faqItems = document.querySelectorAll(".faqItem");
+
+    faqItems.forEach(item => {
+      item.addEventListener("click", () => {
+        // Stäng andra öppna frågor
+        faqItems.forEach(el => {
+          if (el !== item) el.classList.remove("active");
+        });
+        // Växla på klickad
+        item.classList.toggle("active");
+      });
+    });
 })

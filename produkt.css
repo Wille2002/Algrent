@@ -98,3 +98,33 @@
      display: flex;
      gap: 1vw;
  }
+ .faqItem {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    padding: 15px 0;
+    /*border-bottom: 1px solid #e6e6e6;*/
+  }
+  .faqIcon{
+    font-weight: bold;
+      font-size: 20px;
+      transition: transform 0.3s;
+  }
+  .faqAnswer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease;
+    font-size: 0.95rem;
+    color: #333;
+    padding-left: 5px;
+  }
+
+  .faqItem.active .faqAnswer {
+    max-height: 200px;
+    padding: 10px 0;
+  }
+
+  .faqIcon:active{       
+     transform: rotate(45deg);
+  }
