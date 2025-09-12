@@ -282,5 +282,6 @@ document.querySelector("#produktKnapp").addEventListener("click", e => {
 
             </div>
         </div>
-    `
+    `;
+    window.scrollTo(0, 0);
 })
