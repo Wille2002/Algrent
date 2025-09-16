@@ -1,0 +1,68 @@
+<div class="menuItem">
+    <div class="dropDownMenu">Om oss</div>
+    <img class="arrow" src="img/dropDownArrow.png" alt="">
+</div>
+
+<div class="menuItem">
+    <div id="produktKnapp" class="dropDownMenu">Produkten</div>
+</div>
+
+
+<div class="menuItem">
+    <div class="dropDownMenu">FaQ</div>
+    <img class="arrow" src="img/dropDownArrow.png" alt="">
+</div>
+
+<div class="menuItem">
+    <div class="dropDownMenu">Rengör effektivt</div>
+    <img class="arrow" src="img/dropDownArrow.png" alt="">
+</div>
+
+
+
+function showDropDownMenu(array, menuText) {
+document.querySelectorAll(".dropDownContainer").forEach(el => el.remove());
+
+document.querySelectorAll(".menuItem").forEach(el => {
+let menu = el.querySelector(".dropDownMenu");
+if (menu && menu.textContent.trim() === menuText.trim()) {
+let dropDownContainer = document.createElement("div");
+dropDownContainer.classList.add("dropDownContainer");
+
+array.forEach(item => {
+let dropDownElement = document.createElement("div");
+dropDownElement.classList.add("dropDownElement");
+dropDownElement.textContent = item;
+dropDownContainer.appendChild(dropDownElement);
+});
+
+el.appendChild(dropDownContainer);
+}
+});
+}
+
+function selectDropDownMenu(menuText) {
+let infoArray = [];
+
+switch (menuText.trim()) {
+case "Om oss":
+infoArray = ["Leverans", "Återförsäljare", "B2B"];
+break;
+case "FaQ":
+infoArray = ["Kundrecensioner", "Blogg", "Varför Algrent"];
+break;
+case "Rengör effektivt":
+infoArray = ["Tvätta tak", "Tvätta altan", "Fasadtvätt", "Tvätta markis", "Rengör utemöbler"];
+break;
+default:
+return;
+}
+
+showDropDownMenu(infoArray, menuText);
+}
+
+document.querySelectorAll(".dropDownMenu").forEach(el => {
+el.addEventListener("mouseenter", e => {
+selectDropDownMenu(e.target.textContent);
+});
+});

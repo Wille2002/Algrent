@@ -122,54 +122,6 @@ function sendMail(e) {
 
 };
 
-
-function showDropDownMenu(array, menuText) {
-    document.querySelectorAll(".dropDownContainer").forEach(el => el.remove());
-
-    document.querySelectorAll(".menuItem").forEach(el => {
-        let menu = el.querySelector(".dropDownMenu");
-        if (menu && menu.textContent.trim() === menuText.trim()) {
-            let dropDownContainer = document.createElement("div");
-            dropDownContainer.classList.add("dropDownContainer");
-
-            array.forEach(item => {
-                let dropDownElement = document.createElement("div");
-                dropDownElement.classList.add("dropDownElement");
-                dropDownElement.textContent = item;
-                dropDownContainer.appendChild(dropDownElement);
-            });
-
-            el.appendChild(dropDownContainer);
-        }
-    });
-}
-
-function selectDropDownMenu(menuText) {
-    let infoArray = [];
-
-    switch (menuText.trim()) {
-        case "Om oss":
-            infoArray = ["Leverans", "Återförsäljare", "B2B"];
-            break;
-        case "FaQ":
-            infoArray = ["Kundrecensioner", "Blogg", "Varför Algrent"];
-            break;
-        case "Rengör effektivt":
-            infoArray = ["Tvätta tak", "Tvätta altan", "Fasadtvätt", "Tvätta markis", "Rengör utemöbler"];
-            break;
-        default:
-            return;
-    }
-
-    showDropDownMenu(infoArray, menuText);
-}
-
-document.querySelectorAll(".dropDownMenu").forEach(el => {
-    el.addEventListener("mouseenter", e => {
-        selectDropDownMenu(e.target.textContent);
-    });
-});
-
 const reveals = document.querySelectorAll(".scroll-reveal");
 
 function revealOnScroll() {
@@ -187,117 +139,19 @@ window.addEventListener("scroll", revealOnScroll);
 window.addEventListener("load", revealOnScroll);
 
 
-document.querySelector("#produktKnapp").addEventListener("click", e => {
-    document.querySelector("main").innerHTML = `
-       <div id="containerProdukt">
-            <div id="containerTopProdukt">
-                <div id="imgDiv">
-                    <img src="./img/algrentProdukt.png" alt="">
-                </div>
-                <div id="TopRightDiv">
-                    <h1> Algrent Proffs</h1>
-                    <p>Professionell sanering av alger, mossa & svartmögel</p>
-                    <div id="produktFakta">
-                        <h1>Snabb Produktfakta</h1>
-                        <div id="faktaContainer">
-                            <div id="fakta1">
-                                <div>
-                                    <p>Räcker till</p>
-                                    <p>1l -> ca 100 m2 (21 l färdig lösning)</p>
-                                </div>
-                                <div>
-                                    <p>Miljö</p>
-                                    <p>Biologiskt nedbrytbar</p>
-                                </div>
-                            </div>
-                            <div id="fakta2">
-                                <div>
-                                <p>Varaktighet</p>
-                                    <p>Upp till 5 år</p>
-                                </div>
-                                <div>
-                                    <p>Ytor</p>
-                                    <p>Tak, fasader, stenplattor m.m</p>
-                                </div>
-                            </div>
 
-                        </div>
-                        </div>
-                    <button>Hämta säkerhetsblad(PDF)</button>
-                </div>
-            </div>
-            <div id="containerMidProdukt">
-                
-                <div id="midLeft">
-                    <div>
-                        <h1>Så fungerar Algrent Proffs</h1>
-                        <p>Algrent Proffs är utvecklad för effektiv sanering av alger, mossa, svartmögel och lavar. Med
-                            ett långvarigt skydd (upp till 5 år) lämpar den sig för tak, fasader, stenplattor och flera
-                            andra hårda ytor. Produkten är biologiskt nedbrytbar och lätt att applicera. </p>
-                    </div>
-                    <div>
-                        <h1>Fakta och användning</h1>
-                        <ul>
-                            <li>Passar på tak, fasader, stenplattor, tegel, trä m.m.</li>
-                            <li>Appliceras med lågtrycksspruta, borste eller pensel</li>
-                            <li>Bäst effekt vid temperatur över +5 °C och torrt väder</li>
-                        </ul>
-                    </div>
-                    <div>
-                        <h1>Användarinstruktion</h1>
-                        <p>Blanda enligt rekommendation på etiketten. Applicera jämnt över ytan och låt verka utan att
-                            spola bort. Alger och mossa dör inom några dagar; synligt resultat normalt inom 1–2 veckor
-                            beroende på väder och mängd organiskt material. </p>
-                    </div>
-                    
-                </div>
-                <div class="productImages">
-                    <img class="productImg" src="img/frontPageDemo.png" alt="">
-                    <img class="productImg" src="img/frontPageImg.png" alt="">
-                </div>
-                </div>
-                <div id="containerMidBotProdukt">
-                    <h1>Vanliga frågor</h1>
-                    <div>
-                        <div class="faqItem">
-                            <p>Hur appliceras produkten?</p>
-                            <div class="faqIcon">+</div>
-                            <div class="faqAnswer"> LALALAL</div>
-                        </div>
-                        <div class="faqItem">
-                            <p>Hur långt tid tar det innan man ser resultat</p>
-                            <div class="faqIcon">+</div>
-                            <div class="faqAnswer">FEFWF</div>
-                        </div>
-                        <div class="faqItem">
-                            <p>Är den skadlig för växter?</p>
-                            <div class="faqIcon">+</div>
-                            <div class="faqAnswer">WDOQDQ</div>
-                        </div>
-                    </div>
-                </div>
-                <div>
-                    <h1>Säkerhet & nedladdningar</h1>
-                    <p>Se säkerhetsdatabladet för fullständiga anvisningar om hantering, förvaring och personlig
-                        skyddsutrustning.</p>
-                    <p>Hämta säkerhetsdatablad (PDF)</p>
-                </div>
 
-            </div>
-        </div>
-    `
-    const faqItems = document.querySelectorAll(".faqItem");
+const faqItems = document.querySelectorAll(".faqItem");
 
-    faqItems.forEach(item => {
-      item.addEventListener("click", () => {
-        
+faqItems.forEach(item => {
+    item.addEventListener("click", () => {
+
         faqItems.forEach(el => {
-          if (el !== item) el.classList.remove("active");
+            if (el !== item) el.classList.remove("active");
         });
-      
+
         item.classList.toggle("active");
-      });
     });
-    
-    window.scrollTo(0, 0);
-})
+});
+
+window.scrollTo(0, 0);
