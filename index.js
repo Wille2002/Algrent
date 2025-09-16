@@ -140,22 +140,21 @@ window.addEventListener("load", revealOnScroll);
 
 
 
-document.querySelector(".faqIcon").addEventListener("click", dropDownInfo)
 
-function dropDownInfo(){
-    const faqItems = document.querySelectorAll(".faqItem");
+function initFAQ(selector) {
+    const faqItems = document.querySelectorAll(selector);
+
     faqItems.forEach(item => {
         item.addEventListener("click", () => {
-    
             faqItems.forEach(el => {
                 if (el !== item) el.classList.remove("active");
             });
-    
             item.classList.toggle("active");
         });
     });
-    
 }
+
+initFAQ(".faqItem");
 
 
 window.scrollTo(0, 0);
