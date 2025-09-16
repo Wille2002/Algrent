@@ -121,13 +121,12 @@
   }
 
   .faqItem.active .faqAnswer {
-    max-height: 200px;
+   
     padding: 10px 0;
   }
 
   .faqIcon:active{       
-     transform: rotate(45deg);
-  
+    transform: rotate(45deg);
     height: 70vh;
 }
 
