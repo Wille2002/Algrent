@@ -157,9 +157,8 @@ function initFAQ(selector) {
 
 initFAQ(".faqItem");
 
-
 window.scrollTo(0, 0);
 
 document.querySelector("#logoAlgrent").addEventListener("click", e => {
-    
+
 })

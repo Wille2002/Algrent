@@ -13,7 +13,9 @@
     height: 70vh;
     flex-direction: row;
     gap: 10%;
+    width: 75%;
 }
+
 
 #imgDiv {
     width: 45%;
@@ -43,9 +45,10 @@
     margin: 0;
 }
 
-#TopRightDiv>button {
-    background-color: #166534;
-    color: #f8faf9;
+#prisDiv {
+    color: #166534;
+    font-size: 2vw;
+    font-weight: bold;
 }
 
 #produktFakta {
@@ -59,9 +62,7 @@
 
 #faktaContainer {
     display: flex;
-    background-color: #fff;
-    border-radius: 10px;
-    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+
     padding: 10px;
 }
 
@@ -103,8 +104,8 @@
 .faqItem {
     display: flex;
     flex-direction: column;
+    margin: 0;
     /* gör att answer alltid hamnar under */
-    margin-bottom: 1rem;
     cursor: pointer;
 }
 
@@ -118,7 +119,6 @@
 
 .faqItemHeader>p {
     margin: 0;
-    width: 100%;
 }
 
 .faqIcon {
@@ -131,6 +131,7 @@
     display: none;
     /* dold från början */
     margin-top: 0.5rem;
+    width: 30vw;
 }
 
 .faqItem.active .faqAnswer {
