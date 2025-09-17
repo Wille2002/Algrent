@@ -48,6 +48,7 @@ function orderPage(e) {
     </div>
 </div>
 `;
+    document.querySelector("footer").remove();
     document.getElementById("beställKnapp").addEventListener("click", showForm);
 }
 
@@ -158,3 +159,7 @@ initFAQ(".faqItem");
 
 
 window.scrollTo(0, 0);
+
+document.querySelector("#logoAlgrent").addEventListener("click", e => {
+    
+})
