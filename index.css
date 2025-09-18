@@ -177,3 +177,22 @@ footer {
     display: flex;
     align-self: center;
 }
+
+#headerIcons{
+    display: flex;
+    width: 100vw;
+    justify-content: center;
+    gap: 5vw;
+}
+
+.headerIcon{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.iconText{
+    font-weight: bold;
+}
