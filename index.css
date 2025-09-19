@@ -250,7 +250,4 @@ footer {
     transition: opacity 0.3s ease;
   }
   
-  .faqIcon.active .faqAnswer {
-    display: block;
-    /* visas när man klickat */
-}
+  
