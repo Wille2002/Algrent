@@ -178,66 +178,49 @@ footer {
     align-self: center;
 }
 
-#containerFaktaAlgrent {
+#headerIcons{
     display: flex;
+    width: 100vw;
     justify-content: center;
-    align-items: center;
-    background-color: #000;
-    color: white;
-    height: 48vh;
     gap: 5vw;
 }
 
-.faktaRutor {
+.headerIcon{
     display: flex;
-    justify-content: center;
     flex-direction: column;
-    width: 25%;
+    justify-content: center;
+    align-items: center;
 
-    #headerIcons {
-        display: flex;
-        width: 100vw;
-        justify-content: center;
-        gap: 5vw;
-    }
+}
 
-    .headerIcon {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
+.iconText{
+    font-weight: bold;
+}
 
-    }
+#titelProduct{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+#titelProduct p{
+    font-size: 20px;
+}
 
-    .iconText {
-        font-weight: bold;
-    }
+#titelProduct h1{
+    font-weight: lighter;
+}
 
-    #titelProduct {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: space-between;
-    }
+#produktInfo{
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    width: 25vw;
+    height: 26vw;
+    letter-spacing: 1px;
+}
 
-    #titelProduct p {
-        font-size: 20px;
-    }
-
-    #titelProduct h1 {
-        font-weight: lighter;
-    }
-
-    #produktInfo {
-        font-size: 20px;
-        font-style: normal;
-        font-weight: 400;
-        line-height: normal;
-        width: 25vw;
-        height: 26vw;
-        letter-spacing: 1px;
-    }
-
-    #produktFakta h1 {
-        font-weight: lighter;
-    }
+#produktFakta h1{
+    font-weight: lighter;
+}
