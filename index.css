@@ -6,7 +6,8 @@
 body {
     background-color: #f9fcfb;
     margin: 0;
-    overflow-x: hidden; /* för säkerhets skull */
+    overflow-x: hidden;
+    /* för säkerhets skull */
 }
 
 /* Logo */
@@ -35,7 +36,7 @@ header {
     align-items: center;
     color: #000;
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 20px;
+    font-size: 1.5vw;
     font-weight: 400;
 }
 
@@ -43,7 +44,7 @@ header {
     color: #589858;
 }
 
-.dropDown > div {
+.dropDown>div {
     cursor: pointer;
 }
 
@@ -53,7 +54,8 @@ header {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    width: 100%;   /* ändrat från 100vw */
+    width: 100%;
+    /* ändrat från 100vw */
     gap: 11vh;
 }
 
@@ -61,7 +63,7 @@ header {
     width: 100%;
 }
 
-#startImg > img {
+#startImg>img {
     width: 100%;
     height: auto;
 }
@@ -79,7 +81,8 @@ header {
     align-items: center;
     flex-direction: row;
     gap: 5vw;
-    flex-wrap: wrap; /* mer responsiv */
+    flex-wrap: wrap;
+    /* mer responsiv */
 }
 
 .containerTxt {
@@ -99,7 +102,7 @@ header {
     max-width: 35vw;
 }
 
-.MellanstoraBilder > img {
+.MellanstoraBilder>img {
     max-width: 35vw;
     height: auto;
 }
@@ -116,7 +119,8 @@ header {
 footer {
     background-color: #eaeaea;
     height: 50vh;
-    width: 100%;  /* ändrat från 100vw */
+    width: 100%;
+    /* ändrat från 100vw */
 }
 
 /* Dropdown */
@@ -180,30 +184,37 @@ footer {
     display: flex;
     justify-content: space-evenly;
     align-items: flex-start;
-    flex-wrap: wrap;   
+    flex-wrap: wrap;
     width: 100%;
-    background-color: #212121;
+    background-color: #000;
     color: white;
     padding: 3rem 1rem;
-    gap: 2rem;  /* ändrat från 5vw */
-
+    gap: 2rem;
+    /* ändrat från 5vw */
+    height: 50vh;
 }
 
 .faktaRutor {
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
-    flex: 1 1 250px;  /* flexibla rutor */
+    justify-content: space-between;
+    flex: 1 1 250px;
+    /* flexibla rutor */
+    margin-top: 7vh;
     max-width: 300px;
+    gap: 20px;
+    height: 25vh;
 }
 
 /* Ikoner */
 #headerIcons {
     display: flex;
-    width: 100%;   /* ändrat från 100vw */
+    width: 100%;
+    /* ändrat från 100vw */
     justify-content: center;
     gap: 5vw;
-    flex-wrap: wrap; /* för mobil */
+    flex-wrap: wrap;
+    /* för mobil */
 }
 
 .headerIcon {
@@ -245,9 +256,13 @@ footer {
     font-weight: lighter;
 }
 
-.faktaRutor.active .faktaBrödTxt {
-    opacity: 0;
-    transition: opacity 0.3s ease;
-  }
-  
-  
+.dropDownFact {
+    display: flex;
+    width: 100%;
+    gap: 10%;
+    align-items: center;
+}
+
+.headerFaktaRutor {
+    font-size: 1.5vw;
+}
