@@ -137,6 +137,10 @@
 .faqItem.active .faqIcon {
     transform: rotate(45deg);
 }
+.faqIcon.active .faqAnswer {
+    display: block;
+    /* visas när man klickat */
+}
 
 #midLeft {
     width: 50%;

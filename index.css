@@ -182,7 +182,7 @@ footer {
     align-items: flex-start;
     flex-wrap: wrap;   
     width: 100%;
-    background-color: #000;
+    background-color: #212121;
     color: white;
     padding: 3rem 1rem;
     gap: 2rem;  /* ändrat från 5vw */
@@ -243,4 +243,14 @@ footer {
 
 #produktFakta h1 {
     font-weight: lighter;
+}
+
+.faktaRutor.active .faktaBrödTxt {
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+  
+  .faqIcon.active .faqAnswer {
+    display: block;
+    /* visas när man klickat */
 }
