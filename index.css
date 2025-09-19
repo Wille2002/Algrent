@@ -178,49 +178,66 @@ footer {
     align-self: center;
 }
 
-#headerIcons{
+#containerFaktaAlgrent {
     display: flex;
-    width: 100vw;
     justify-content: center;
+    align-items: center;
+    background-color: #000;
+    color: white;
+    height: 48vh;
     gap: 5vw;
 }
 
-.headerIcon{
+.faktaRutor {
     display: flex;
-    flex-direction: column;
     justify-content: center;
-    align-items: center;
+    flex-direction: column;
+    width: 25%;
 
-}
+    #headerIcons {
+        display: flex;
+        width: 100vw;
+        justify-content: center;
+        gap: 5vw;
+    }
 
-.iconText{
-    font-weight: bold;
-}
+    .headerIcon {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
 
-#titelProduct{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-}
-#titelProduct p{
-    font-size: 20px;
-}
+    }
 
-#titelProduct h1{
-    font-weight: lighter;
-}
+    .iconText {
+        font-weight: bold;
+    }
 
-#produktInfo{
-    font-size: 20px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
-    width: 25vw;
-    height: 26vw;
-    letter-spacing: 1px;
-}
+    #titelProduct {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+    }
 
-#produktFakta h1{
-    font-weight: lighter;
-}
+    #titelProduct p {
+        font-size: 20px;
+    }
+
+    #titelProduct h1 {
+        font-weight: lighter;
+    }
+
+    #produktInfo {
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        width: 25vw;
+        height: 26vw;
+        letter-spacing: 1px;
+    }
+
+    #produktFakta h1 {
+        font-weight: lighter;
+    }
