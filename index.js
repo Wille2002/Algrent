@@ -156,9 +156,11 @@ function initFAQ(selector) {
 }
 
 initFAQ(".faqItem");
+initFAQ(".faqIcon");
 
 window.scrollTo(0, 0);
 
 document.querySelector("#logoAlgrent").addEventListener("click", e => {
 
 })
+
