@@ -177,3 +177,20 @@ footer {
     display: flex;
     align-self: center;
 }
+
+#containerFaktaAlgrent {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #000;
+    color: white;
+    height: 48vh;
+    gap: 5vw;
+}
+
+.faktaRutor {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 25%;
+}
