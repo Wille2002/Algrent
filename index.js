@@ -168,17 +168,22 @@ const faqItems = document.querySelectorAll('.faktaRutor');
 
 faqItems.forEach(item => {
     item.addEventListener('click', () => {
-        faqItems.forEach(i => {
-            if (i !== item) {
-                i.classList.add('hidden');
-                i.classList.remove('active');
-            }
-        });
-        item.classList.toggle('active');
+        const isOpen = item.classList.contains('open');
 
-        // Om man klickar på redan aktiv, visa alla igen
-        if (!item.classList.contains('active')) {
-            faqItems.forEach(i => i.classList.remove('hidden'));
+        // Stäng alla först
+        faqItems.forEach(i => {
+            i.classList.remove('open');
+            i.classList.remove('hidden');
+        });
+
+        if (!isOpen) {
+            // Öppna vald och göm andra
+            item.classList.add('open');
+            faqItems.forEach(i => {
+                if (i !== item) {
+                    i.classList.add('hidden');
+                }
+            });
         }
     });
 });

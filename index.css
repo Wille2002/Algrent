@@ -182,17 +182,33 @@ footer {
 /* Fakta container */
 #containerFaktaAlgrent {
     display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    flex-wrap: wrap;
+    flex-direction: row;
+    /* radlayout */
+    flex-wrap: nowrap;
+    /* inga brytningar */
+    gap: 2rem;
     width: 100%;
+    justify-content: space-evenly;
+    min-height: 50vh;
+    padding: 3rem 1rem;
     background-color: #212121;
     color: white;
-    padding: 3rem 1rem;
-    gap: 2rem;
-    height: 50vh;
+    overflow-x: auto;
+    /* om det blir för många rutor kan man scrolla sidledes */
 }
 
+.faktaRutor {
+    flex: 0 0 300px;
+    /* alla boxar lika breda som standard */
+    transition: all 0.4s ease;
+}
+
+/* När en är öppen */
+.faktaRutor.open {
+    flex: 1;
+    /* tar allt tillgängligt space åt höger */
+    max-width: 100%;
+}
 
 /* Ikoner */
 #headerIcons {
@@ -266,4 +282,218 @@ footer {
     max-width: 300px;
     gap: 20px;
     height: 25vh;
+}
+
+
+
+#containerProdukt {
+    display: flex;
+    flex-direction: column;
+    gap: 15vh;
+    background-color: #f8faf9;
+    justify-content: center;
+    width: 90vw;
+}
+
+#containerTopProdukt {
+    display: flex;
+    justify-content: center;
+    height: 70vh;
+    flex-direction: row;
+    gap: 10%;
+    width: 75%;
+}
+
+
+#imgDiv {
+    width: 45%;
+    height: 100%;
+}
+
+#imgDiv>img {
+    height: 100%;
+    width: 100%;
+}
+
+#TopRightDiv {
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+
+    justify-content: space-evenly;
+}
+
+#TopRightDiv>h1 {
+    color: #14532d;
+    margin: 0;
+}
+
+#TopRightDiv>p {
+    color: #166534;
+    margin: 0;
+}
+
+#prisDiv {
+    color: #166534;
+    font-size: 2vw;
+    font-weight: bold;
+}
+
+#produktFakta {
+    display: flex;
+    flex-direction: column;
+}
+
+#faktaContainer {
+    display: flex;
+}
+
+#fakta1 {
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+    flex-direction: column;
+}
+
+#fakta2 {
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+    flex-direction: column;
+}
+
+
+#containerMidProdukt {
+    display: flex;
+    width: 90vw;
+    gap: 3vw;
+}
+
+#containerMidProdukt h1 {
+    color: #14532D;
+}
+
+.productImg {
+    width: 200px;
+    border-radius: 5px;
+}
+
+.productImages {
+    display: flex;
+    gap: 1vw;
+}
+
+.faqItem {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    /* gör att answer alltid hamnar under */
+    cursor: pointer;
+}
+
+
+.faqItemHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 50%;
+}
+
+.faqItemHeader>p {
+    margin: 0;
+}
+
+.faqIcon {
+    font-weight: bold;
+    font-size: 20px;
+    transition: transform 0.3s ease;
+}
+
+
+.faqItem.active .faqAnswer {
+    display: block;
+    /* visas när man klickat */
+}
+
+
+.faqItem.active .faqIcon {
+    transform: rotate(45deg);
+}
+
+.faqIcon.active .faqAnswer {
+    display: block;
+    /* visas när man klickat */
+}
+
+#midLeft {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: center;
+}
+
+#containerMidProdukt h1 {
+    color: #14532D;
+}
+
+.productImages {
+    width: 50%;
+}
+
+.productImg {
+    width: 100%;
+    border-radius: 5px;
+    height: 100%;
+}
+
+.productImages {
+    display: flex;
+    gap: 1vw;
+
+}
+
+.faktaRutor.hidden {
+    flex: 0;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.4s ease;
+}
+
+.faktaRutor {
+    flex: 0 0 300px;
+    transition: all 0.4s ease;
+    cursor: pointer;
+
+    display: flex;
+    /* radlayout */
+    flex-direction: row;
+    /* två kolumner */
+    align-items: flex-start;
+    overflow: hidden;
+    padding: 1rem;
+}
+
+.faktaRutor.open {
+    flex: 1 1 auto;
+    max-width: 100%;
+}
+
+/* Vänsterkolumn */
+.faqContentLeft {
+    flex: 0 0 300px;
+    /* fast bredd */
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+
+
+.faqItem .faqAnswer {
+    display: none;
+}
+
+.faqItem.open .faqAnswer {
+    display: block;
 }
