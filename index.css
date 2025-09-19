@@ -1,13 +1,21 @@
+/* Grundinställningar */
+* {
+    box-sizing: border-box;
+}
+
 body {
     background-color: #f9fcfb;
     margin: 0;
+    overflow-x: hidden; /* för säkerhets skull */
 }
 
+/* Logo */
 #logoAlgrent {
     width: 164px;
-    height: max-content;
+    height: auto;
 }
 
+/* Header */
 header {
     background-color: #f9fcfb;
     display: flex;
@@ -20,35 +28,32 @@ header {
     z-index: 1;
 }
 
-
-
 .dropDown {
     display: flex;
-    width: 50vw;
+    width: 50%;
     justify-content: space-evenly;
     align-items: center;
     color: #000;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 20px;
-    font-style: normal;
     font-weight: 400;
-    line-height: normal;
 }
 
 .dropDownMenu:hover {
     color: #589858;
 }
 
-.dropDown>div {
+.dropDown > div {
     cursor: pointer;
 }
 
+/* Startsektion */
 #startingPage {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    width: 100vw;
+    width: 100%;   /* ändrat från 100vw */
     gap: 11vh;
 }
 
@@ -56,31 +61,32 @@ header {
     width: 100%;
 }
 
-#startImg>img {
+#startImg > img {
     width: 100%;
+    height: auto;
 }
 
 #infoFrontPage {
     font-size: 2.3vw;
     text-align: center;
-    width: 60vw;
+    width: 60%;
 }
 
+/* Containers */
 .containerInfo {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: row;
     gap: 5vw;
+    flex-wrap: wrap; /* mer responsiv */
 }
 
 .containerTxt {
     display: flex;
-    justify-content: center;
-
     flex-direction: column;
     gap: 2vw;
-
+    justify-content: center;
 }
 
 .SemiheaderFPage {
@@ -90,51 +96,46 @@ header {
 
 .brödTxt {
     font-size: 1.5vw;
-    width: 35vw;
+    max-width: 35vw;
 }
 
-.MellanstoraBilder>img {
-    width: 35vw;
-    height: 60vh;
+.MellanstoraBilder > img {
+    max-width: 35vw;
+    height: auto;
 }
 
+/* Länkar */
 .läsMer {
     color: #589858;
     font-size: 1.5vw;
-    font-style: normal;
     font-weight: 700;
-    line-height: normal;
     cursor: pointer;
 }
 
+/* Footer */
 footer {
     background-color: #eaeaea;
     height: 50vh;
-    width: 100vw;
+    width: 100%;  /* ändrat från 100vw */
 }
 
+/* Dropdown */
 .menuItem {
     position: relative;
     display: flex;
     gap: 5px;
 }
 
-
-
-/* Startläge (gömd) */
 .dropDownContainer {
-
     position: absolute;
     top: 100%;
     left: 0;
     display: flex;
-    justify-content: center;
     flex-direction: column;
     gap: 10px;
-
     background: white;
     border-radius: 5px;
-    padding: 1vw 0 1vw 1vw;
+    padding: 1vw;
     min-width: 150px;
     z-index: 10;
 
@@ -143,28 +144,24 @@ footer {
     pointer-events: none;
 
     transition: opacity 0.3s ease, transform 0.3s ease;
-
 }
 
 .dropDownElement {
     font-size: 15px;
 }
 
-
 .menuItem:hover .dropDownContainer {
     opacity: 1;
     transform: translateY(0);
     pointer-events: auto;
-    padding-left: 1vw;
 }
 
+/* Scroll reveal */
 .scroll-reveal {
     opacity: 0;
     transform: translateY(60px);
     transition: all 0.6s ease-out;
-
 }
-
 
 .scroll-reveal.visible {
     opacity: 1;
@@ -178,67 +175,72 @@ footer {
     align-self: center;
 }
 
+/* Fakta container */
 #containerFaktaAlgrent {
     display: flex;
-    justify-content: center;
-    align-items: center;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    flex-wrap: wrap;   
+    width: 100%;
     background-color: #000;
     color: white;
-    height: 48vh;
-    gap: 5vw;
+    padding: 3rem 1rem;
+    gap: 2rem;  /* ändrat från 5vw */
+
 }
 
 .faktaRutor {
     display: flex;
-    justify-content: center;
     flex-direction: column;
-    width: 25%;
+    justify-content: flex-start;
+    flex: 1 1 250px;  /* flexibla rutor */
+    max-width: 300px;
 }
 
-    #headerIcons {
-        display: flex;
-        width: 100vw;
-        justify-content: center;
-        gap: 5vw;
-    }
+/* Ikoner */
+#headerIcons {
+    display: flex;
+    width: 100%;   /* ändrat från 100vw */
+    justify-content: center;
+    gap: 5vw;
+    flex-wrap: wrap; /* för mobil */
+}
 
-    .headerIcon {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
+.headerIcon {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
 
-    }
+.iconText {
+    font-weight: bold;
+}
 
-    .iconText {
-        font-weight: bold;
-    }
+/* Produkt */
+#titelProduct {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
 
-    #titelProduct {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: space-between;
-    }
+#titelProduct p {
+    font-size: 20px;
+}
 
-    #titelProduct p {
-        font-size: 20px;
-    }
+#titelProduct h1 {
+    font-weight: lighter;
+}
 
-    #titelProduct h1 {
-        font-weight: lighter;
-    }
+#produktInfo {
+    font-size: 20px;
+    font-weight: 400;
+    line-height: normal;
+    max-width: 25vw;
+    letter-spacing: 1px;
+}
 
-    #produktInfo {
-        font-size: 20px;
-        font-style: normal;
-        font-weight: 400;
-        line-height: normal;
-        width: 25vw;
-        height: 26vw;
-        letter-spacing: 1px;
-    }
-
-    #produktFakta h1 {
-        font-weight: lighter;
-    }
+#produktFakta h1 {
+    font-weight: lighter;
+}
