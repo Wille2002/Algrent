@@ -182,28 +182,26 @@ footer {
 /* Fakta container */
 #containerFaktaAlgrent {
     display: flex;
-    justify-content: space-evenly;
-    align-items: flex-start;
-    flex-wrap: wrap;
-    width: 100%;
-    background-color: #000;
-    color: white;
-    padding: 3rem 1rem;
-    gap: 2rem;
-    /* ändrat från 5vw */
-    height: 50vh;
+  justify-content: space-evenly;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  width: 100%;
+  background-color: #000;
+  color: white;
+  padding: 3rem 1rem;
+  gap: 2rem;
+  height: 50vh;
 }
 
 .faktaRutor {
     display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    flex: 1 1 250px;
-    /* flexibla rutor */
-    margin-top: 7vh;
-    max-width: 300px;
-    gap: 20px;
-    height: 25vh;
+  flex-direction: column;
+  justify-content: space-between;
+  flex: 1 1 250px;
+  margin-top: 7vh;
+  max-width: 300px;
+  gap: 20px;
+  height: 25vh;
 }
 
 /* Ikoner */
