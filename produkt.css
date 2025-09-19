@@ -170,3 +170,56 @@
     gap: 1vw;
 
 }
+
+#containerFaktaAlgrent {
+    display: flex;
+    gap: 20px;
+}
+
+.faktaRutor {
+    flex: 1;
+    transition: all 0.5s ease;
+    overflow: hidden;
+    cursor: pointer;
+    position: relative;
+}
+
+.faktaRutor.hidden {
+    flex: 0;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.faktaRutor.active {
+    flex: 1 1 100%;
+    opacity: 1;
+}
+
+.faqAnswer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease, opacity 0.5s ease;
+    opacity: 0;
+}
+
+.faktaRutor.active .faqAnswer {
+    max-height: 1000px; /* tillräckligt för att visa hela innehållet */
+    opacity: 1;
+    text-align: left; /* texten börjar på vänster sida när aktiv */
+}
+
+.dropDownFact {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.faqIcon {
+    transition: transform 0.3s ease;
+}
+
+.faktaRutor.active .faqIcon {
+    transform: rotate(45deg);
+}
+

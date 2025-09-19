@@ -164,3 +164,21 @@ document.querySelector("#logoAlgrent").addEventListener("click", e => {
 
 })
 
+const faqItems = document.querySelectorAll('.faktaRutor');
+
+faqItems.forEach(item => {
+    item.addEventListener('click', () => {
+        faqItems.forEach(i => {
+            if (i !== item) {
+                i.classList.add('hidden');
+                i.classList.remove('active');
+            }
+        });
+        item.classList.toggle('active');
+
+        // Om man klickar på redan aktiv, visa alla igen
+        if (!item.classList.contains('active')) {
+            faqItems.forEach(i => i.classList.remove('hidden'));
+        }
+    });
+});
