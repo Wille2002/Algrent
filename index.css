@@ -497,3 +497,10 @@ footer {
 .faqItem.open .faqAnswer {
     display: block;
 }
+.faqAnswer{
+    display: none;
+}
+
+.faqAnswer.active {
+    display: flex;
+}

@@ -146,17 +146,42 @@ function initFAQ(selector) {
     const faqItems = document.querySelectorAll(selector);
 
     faqItems.forEach(item => {
-        item.addEventListener("click", () => {
+        item.addEventListener("click", () => {    
+            console.log(item);
+            
             faqItems.forEach(el => {
-                if (el !== item) el.classList.remove("active");
+                if (el !== item) {
+                    el.classList.remove("active");
+                    // Hide the sibling answer
+                    const siblingAnswer = el.parentElement.querySelector(".faqAnswer");
+                    if (siblingAnswer) siblingAnswer.classList.remove("active");
+                }
             });
+
+            console.log(item);
+            document.querySelectorAll(".faqAnswer").forEach(item => {
+                item.addEventListener("click", e => {
+                    if(item.classList.contains("active")){
+                        item.classList.remove("active")
+                    }
+            })
+            })
+            
             item.classList.toggle("active");
+
+            // Toggle active on its sibling faqAnswer
+            const answer = item.parentElement.querySelector(".faqAnswer");
+            if (answer) answer.classList.toggle("active");
         });
     });
 }
 
+
+
+// Initialize only on .faqItem
 initFAQ(".faqItem");
-initFAQ(".faqIcon");
+
+
 
 window.scrollTo(0, 0);
 
