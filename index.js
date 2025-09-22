@@ -193,14 +193,12 @@ faqItems.forEach(item => {
     item.addEventListener('click', () => {
         const isOpen = item.classList.contains('open');
 
-        // Stäng alla först
         faqItems.forEach(i => {
             i.classList.remove('open');
             i.classList.remove('hidden');
         });
 
         if (!isOpen) {
-            // Öppna vald och göm andra
             item.classList.add('open');
             faqItems.forEach(i => {
                 if (i !== item) {

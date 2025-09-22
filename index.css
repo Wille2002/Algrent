@@ -463,7 +463,7 @@ footer {
     /* två kolumner */
     align-items: flex-start;
     overflow: hidden;
-    padding: 1rem;
+    
 }
 
 .faktaRutor.open {
