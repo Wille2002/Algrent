@@ -499,3 +499,8 @@ footer {
 .faqAnswer.active {
     display: flex;
 }
+
+.btn{
+    background-color: #14532d;
+    color: white;
+}
