@@ -524,3 +524,26 @@ footer {
     background-color: #45a049;
     transform: scale(1.05);
 }
+#startImg {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+  }
+  
+  #startImg img {
+    width: 100%;
+    display: block;
+  }
+  
+  #startImg p {
+    position: absolute;
+    top: 42%;              /* mitten på höjden */
+    left: 50%;             /* mitten på bredden */
+    transform: translate(-50%, -50%); /* exakt centrerat */
+    color: white;          /* syns mot bilden */
+    font-size: 3vw;       /* större text */
+    font-weight: bold;
+    text-align: center;
+    text-shadow: 0 4px 8px black;
+  }
+  
