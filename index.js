@@ -7,7 +7,7 @@ let antal;
 function orderPage(e) {
     document.querySelector("main").innerHTML = `
 <div id="formPage">
-    <img src="../Algrent/img/algrentProdukt.png" alt="">
+    <img src="./img/image0.jpeg" alt="">
     <div id="formContainer">
 
         <div id="info">Beställ Algrent i 5 litersdunkar för företag och organisationer genom att svara på
@@ -146,25 +146,25 @@ function initFAQ(selector) {
     const faqItems = document.querySelectorAll(selector);
 
     faqItems.forEach(item => {
-        item.addEventListener("click", () => {    
-            
-            
+        item.addEventListener("click", () => {
+
+
 
             document.querySelectorAll(".faqAnswer").forEach(item => {
                 item.addEventListener("click", e => {
-                    if(item.classList.contains("active")){
+                    if (item.classList.contains("active")) {
                         item.classList.remove("active")
                     }
-            })
+                })
             })
             document.querySelectorAll(".faqItem").forEach(item => {
                 item.addEventListener("click", e => {
-                    if(item.classList.contains("active")){
+                    if (item.classList.contains("active")) {
                         item.classList.remove("active")
                     }
+                })
             })
-            })
-            
+
             //item.classList.toggle("active");
 
             // Toggle active on its sibling faqAnswer

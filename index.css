@@ -501,20 +501,19 @@ footer {
     display: flex;
 }
 
-.btn{
+.btn {
     background-color: #14532d;
     color: white;
 }
+
 #Form {
     background-color: #14532D;
-    /* fräsch grön */
     color: white;
     padding: 12px 28px;
     font-size: 18px;
     font-weight: bold;
     border: none;
     border-radius: 50px;
-    /* rundad form */
     cursor: pointer;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     transition: all 0.3s ease;
@@ -522,6 +521,10 @@ footer {
 
 #Form:hover {
     background-color: #45a049;
-    /* mörkare grön vid hover */
+    transform: scale(1.05);
+}
+
+#SäkerhetsbladBTN:hover {
+    background-color: #45a049;
     transform: scale(1.05);
 }
