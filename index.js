@@ -121,13 +121,13 @@ function checkInput() {
     console.log(antal);
     if (counter == 4) {
         console.log("yes");
-        
+
         if (antal.valueAsNumber > 0) {
             console.log(antal.valueAsNumber);
             document.getElementById("orderBtn").style.backgroundColor = "#45a049";
             document.getElementById("orderBtn").disabled = false;
         }
-    } 
+    }
 }
 
 
