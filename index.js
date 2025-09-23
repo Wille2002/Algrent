@@ -14,6 +14,7 @@ function orderPage(e) {
             formuläret och klicka beställ
         </div>
 
+        <p>Pris exkl. moms: 1.000 kronor</p>
         <div class="Header">Företagsuppgifter</div>
 
         <div id="inputContainer">
@@ -23,7 +24,7 @@ function orderPage(e) {
             </div>
             <div class="input">
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M20 1V4H23V6H20V9H18V6H15V4H18V1H20ZM12 13C10.9 13 10 12.1 10 11C10 9.9 10.9 9 12 9C13.1 9 14 9.9 14 11C14 12.1 13.1 13 12 13ZM13 3.06V5.08C12.6692 5.02761 12.3349 5.00087 12 5C8.65 5 6 7.57 6 11.2C6 13.54 7.95 16.64 12 20.34C16.05 16.64 18 13.55 18 11.2V11H20V11.2C20 14.52 17.33 18.45 12 23C6.67 18.45 4 14.52 4 11.2C4 6.22 7.8 3 12 3C12.34 3 12.67 3.02 13 3.06Z" fill="black"/></svg>
-                <input id="orgNr" type="text" placeholder="Organisationsnummer">
+                <input id="orgNr" type="text" placeholder="Momreg. nummer">
             </div>
             <div class="input">
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M12 10.9C11.39 10.9 10.9 11.39 10.9 12C10.9 12.61 11.39 13.1 12 13.1C12.61 13.1 13.1 12.61 13.1 12C13.1 11.39 12.61 10.9 12 10.9ZM12 2C6.48 2 2 6.48 2 12C2 17.52 6.48 22 12 22C17.52 22 22 17.52 22 12C22 6.48 17.52 2 12 2ZM14.19 14.19L6 18L9.81 9.81L18 6L14.19 14.19Z" fill="black"/></svg>
