@@ -87,11 +87,12 @@ header {
     flex-direction: column;
     gap: 2vw;
     justify-content: center;
+    width: 40vw;
 }
 
 .SemiheaderFPage {
     color: #14532d;
-    font-size: 2.3vw;
+    font-size: 2.1vw;
 }
 
 .brödTxt {
@@ -100,7 +101,7 @@ header {
 }
 
 .MellanstoraBilder>img {
-    max-width: 35vw;
+    max-width: 40vw;
     height: auto;
 }
 
@@ -405,7 +406,12 @@ footer {
     /* visas när man klickat */
 }
 
-
+#containerProdukt {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 15vh;
+}
 
 
 .faqAnswer.active .faqIcon {
@@ -526,24 +532,30 @@ footer {
     background-color: #45a049;
     transform: scale(1.05);
 }
+
 #startImg {
     position: relative;
     display: inline-block;
     width: 100%;
-  }
-  
-  #startImg img {
+}
+
+#startImg img {
     width: 100%;
     display: block;
-  }
-  
-  #startImg p {
+}
+
+#startImg p {
     position: absolute;
-    top: 42%;              /* mitten på höjden */
-    left: 50%;             /* mitten på bredden */
-    transform: translate(-50%, -50%); /* exakt centrerat */
-    color: white;          /* syns mot bilden */
-    font-size: 3vw;       /* större text */
+    top: 42%;
+    /* mitten på höjden */
+    left: 50%;
+    /* mitten på bredden */
+    transform: translate(-50%, -50%);
+    /* exakt centrerat */
+    color: white;
+    /* syns mot bilden */
+    font-size: 3vw;
+    /* större text */
     font-weight: bold;
     text-align: center;
     text-shadow: 0 4px 8px black;
@@ -559,3 +571,22 @@ footer {
     align-items: center;
     flex-direction: column;
   }
+
+
+#FormBottomBtn {
+    background-color: #14532D;
+    color: white;
+    padding: 12px 28px;
+    font-size: 18px;
+    font-weight: bold;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+    width: 30vw;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
