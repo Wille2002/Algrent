@@ -41,10 +41,6 @@ header {
     font-weight: 400;
 }
 
-.dropDownMenu:hover {
-    color: #589858;
-}
-
 .dropDown>div {
     cursor: pointer;
 }
@@ -506,7 +502,7 @@ footer {
     color: white;
 }
 
-#Form {
+.dropDownMenu {
     background-color: #14532D;
     color: white;
     padding: 12px 28px;
@@ -519,7 +515,7 @@ footer {
     transition: all 0.3s ease;
 }
 
-#Form:hover {
+.dropDownMenu:hover {
     background-color: #45a049;
     transform: scale(1.05);
 }
