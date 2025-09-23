@@ -43,13 +43,18 @@ function orderPage(e) {
             </div>
 
             <div id="beställKnapp">
-                <button>Beställ</button>
+                <button id="orderBtn">Beställ</button>
             </div>
     </div>
 </div>
 `;
     document.querySelector("footer").remove();
     document.getElementById("beställKnapp").addEventListener("click", showForm);
+    document.getElementById("Form").hidden = true;
+    document.getElementById("orderBtn").disabled = true;
+    document.querySelectorAll("#inputContainer input").forEach(item => {
+        item.addEventListener("input", checkInput);
+    });
 }
 
 function showForm(e) {
@@ -94,8 +99,35 @@ function showForm(e) {
         location.reload();
     });
 
+
     document.getElementById("bekräftaKnapp").addEventListener("click", sendMail)
 };
+
+function checkInput() {
+    let counter = 0;
+
+    document.querySelectorAll("#inputContainer input").forEach(item => {
+        if (item.value.trim() !== "") {
+            counter++;
+            console.log(counter);
+
+        }
+    });
+
+    let antal = document.getElementById("antal");
+
+
+    console.log(antal);
+    if (counter == 4) {
+        if (antal.valueAsNumber > 0) {
+            console.log(antal.valueAsNumber);
+            document.getElementById("orderBtn").disabled = false;
+        }
+    } else {
+        document.getElementById("orderBtn").disabled = true;
+    }
+}
+
 
 function sendMail(e) {
     alert("Tack! Din order är bekräftad!");
