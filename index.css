@@ -21,6 +21,7 @@ header {
     background-color: #f9fcfb;
     display: flex;
     justify-content: center;
+    gap: 20vw;
     align-items: center;
     height: 13vh;
     gap: 36vw;
@@ -256,7 +257,7 @@ footer {
     font-weight: 400;
     line-height: normal;
     max-width: 25vw;
-   
+
 }
 
 #produktFakta h1 {
@@ -498,4 +499,25 @@ footer {
 
 .faqAnswer.active {
     display: flex;
+}
+
+#Form {
+    background-color: #14532D;
+    /* fräsch grön */
+    color: white;
+    padding: 12px 28px;
+    font-size: 18px;
+    font-weight: bold;
+    border: none;
+    border-radius: 50px;
+    /* rundad form */
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+}
+
+#Form:hover {
+    background-color: #45a049;
+    /* mörkare grön vid hover */
+    transform: scale(1.05);
 }
