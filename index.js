@@ -11,10 +11,10 @@ function orderPage(e) {
     <div id="formContainer">
 
         <div id="info">Beställ Algrent i 5 litersdunkar för företag och organisationer genom att svara på
-            formuläret och klicka beställ
+            formuläret och klicka beställ för att bli fakturerad
         </div>
 
-        <p>Pris exkl. moms: 1.000 kronor</p>
+        <p id="pris">Pris exkl. moms: 1.000 kronor</p>
         <div class="Header">Företagsuppgifter</div>
 
         <div id="inputContainer">
