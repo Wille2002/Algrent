@@ -116,9 +116,11 @@ header {
 /* Footer */
 footer {
     background-color: #eaeaea;
-    height: 50vh;
+    height: 30vh;
     width: 100%;
-    /* ändrat från 100vw */
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 /* Dropdown */
