@@ -516,21 +516,24 @@ footer {
 }
 
 .dropDownMenu {
-    background-color: #14532D;
-    color: white;
+    background: #ffffff;
+    color: #222;
+    border: 1px solid rgba(0, 0, 0, 0.552);
     padding: 12px 28px;
-    font-size: 18px;
-    font-weight: bold;
-    border: none;
-    border-radius: 50px;
+    font-size: 16px;
+    font-weight: 500;
+    border-radius: 5px;
     cursor: pointer;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    transition: all 0.3s ease;
+    transition: all 0.2s ease-in-out;
 }
 
 .dropDownMenu:hover {
-    background-color: #45a049;
-    transform: scale(1.05);
+    background: #14532D;
+    color: #fff;
+}
+
+.dropDownMenu:active {
+    transform: scale(0.97);
 }
 
 #SäkerhetsbladBTN:hover {
@@ -586,7 +589,7 @@ footer {
     font-size: 18px;
     font-weight: bold;
     border: none;
-    border-radius: 20px;
+    border-radius: 10px;
     cursor: pointer;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     transition: all 0.3s ease;
