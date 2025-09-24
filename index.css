@@ -249,10 +249,11 @@ footer {
 #titelProduct h1 {
     font-weight: lighter;
     margin: 0;
+    font-size: 2.1vw;
 }
 
 #produktInfo {
-    font-size: 20px;
+    font-size: 1.3vw;
     font-weight: 400;
     line-height: normal;
     max-width: 25vw;
@@ -262,6 +263,7 @@ footer {
 #produktFakta h1 {
     font-weight: lighter;
     margin: 0;
+    font-size: 2.1vw;
 }
 
 .dropDownFact {
@@ -562,19 +564,19 @@ footer {
     font-weight: bold;
     text-align: center;
     text-shadow: 0 4px 8px black;
-  }
-  
-  #pris{
-    margin: 0px;
-  }
+}
 
-  .contact{
+#pris {
+    margin: 0px;
+}
+
+.contact {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     font-size: 1.2vw;
-  }
+}
 
 
 #FormBottomBtn {
@@ -593,4 +595,8 @@ footer {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+#confirmPage {
+    height: 100vh;
 }

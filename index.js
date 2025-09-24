@@ -44,6 +44,7 @@ function orderPage(e) {
             </div>
 
             <div id="beställKnapp">
+                <div id="Pris">Totalbelopp:</div>
                 <button id="orderBtn">Beställ</button>
             </div>
     </div>
@@ -57,15 +58,22 @@ function orderPage(e) {
     document.querySelectorAll(".input").forEach(item => {
         item.addEventListener("input", checkInput);
     });
+
+    document.getElementById("antal").addEventListener("change", e => {
+        console.log(e);
+
+        document.getElementById("Pris").innerHTML = `Totalbelopp: ${e.target.valueAsNumber * 1000}kr`
+    })
 }
 
 function showForm(e) {
     e.preventDefault();
-    bolagsnamn = document.getElementById("bolagsnamn").value;
-    orgNr = document.getElementById("orgNr").value;
-    address = document.getElementById("address").value;
-    leveransaddress = document.getElementById("leveransaddress").value;
-    antal = document.getElementById("antal").value;
+    let bolagsnamn = document.getElementById("bolagsnamn").value;
+    let orgNr = document.getElementById("orgNr").value;
+    let address = document.getElementById("address").value;
+    let leveransaddress = document.getElementById("leveransaddress").value;
+    let antal = document.getElementById("antal").value;
+
 
     document.querySelector("main").innerHTML = `
         <div class="container">
@@ -87,6 +95,9 @@ function showForm(e) {
 
       <h3>Antal dunkar (5L)</h3>
       <p>${antal}</p>
+
+      <h3>Pris</h3>
+      <p>${antal * 1000}kr</p>
     </div>
 
     <div class="button-group">
