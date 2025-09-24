@@ -4,7 +4,7 @@ let address;
 let leveransaddress;
 let antal;
 
-function orderPage(e) {
+function orderPage(boolean, bolagsnamn, momRegNr, address, leveransaddress, pris) {
     document.querySelector("main").innerHTML = `
 <div id="formPage">
     <img src="./img/image0.jpeg" alt="">
@@ -51,20 +51,34 @@ function orderPage(e) {
     </div>
 </div>
 `;
-    document.querySelector("footer").remove();
-    document.getElementById("beställKnapp").addEventListener("click", showForm);
+
+    if(document.querySelector("footer")){
+        document.querySelector("footer").remove();
+    }
+    document.getElementById("orderBtn").addEventListener("click", showForm);
     document.getElementById("Form").hidden = true;
     document.getElementById("orderBtn").disabled = true;
     document.getElementById("orderBtn").style.backgroundColor = "grey";
     document.querySelectorAll(".input").forEach(item => {
         item.addEventListener("input", checkInput);
     });
-
+    document.getElementById("goBack").addEventListener("click", e => {
+        window.open("https://www.algrentb2b.com");
+        
+    })
     document.getElementById("antal").addEventListener("change", e => {
         console.log(e);
 
         document.getElementById("Pris").innerHTML = `Totalbelopp: ${e.target.valueAsNumber * 1000}kr`
     })
+    if(boolean){
+        document.getElementById("bolagsnamn").value = bolagsnamn;
+        document.getElementById("orgNr").value = momRegNr;
+        document.getElementById("address").value = address;
+        document.getElementById("leveransaddress").value = leveransaddress;
+        document.getElementById("antal").value = pris;
+        document.getElementById("orderBtn").disabled = false;
+    }
 }
 
 function showForm(e) {
@@ -110,7 +124,7 @@ function showForm(e) {
 
 
     document.getElementById("tillbakaKnapp").addEventListener("click", () => {
-        location.reload();
+        orderPage(true, bolagsnamn, orgNr, address, leveransaddress, antal)
     });
 
 

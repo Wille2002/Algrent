@@ -344,8 +344,12 @@
 <script src="index.js"></script>
 <script>
     emailjs.init(''); // Ersätt med din EmailJS user ID
-    document.getElementById("Form").addEventListener("click", orderPage);
-    document.getElementById("FormBottomBtn").addEventListener("click", orderPage);
+    document.getElementById("Form").addEventListener("click", e => {
+        orderPage(false);
+    });
+    document.getElementById("FormBottomBtn").addEventListener("click",  e => {
+        orderPage(false);
+    });
 </script>
 <script></script>
 
