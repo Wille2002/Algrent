@@ -604,6 +604,177 @@ footer {
     height: 100vh;
 }
 
-span{
+span {
     color: #4C9D49;
+}
+
+
+#goBack {
+    border: 1.5px solid #ccc;
+    border-top-color: rgb(204, 204, 204);
+    border-right-color: rgb(204, 204, 204);
+    border-bottom-color: rgb(204, 204, 204);
+    border-left-color: rgb(204, 204, 204);
+    color: #333;
+}
+
+
+
+/* ===== MOBILANPASSNING ===== */
+@media (max-width: 768px) {
+
+    /* Header */
+    header {
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 0 1rem;
+        height: auto;
+        gap: 0;
+    }
+
+    #logoAlgrent {
+        width: 120px;
+    }
+
+    .dropDown {
+        width: auto;
+        font-size: 4vw;
+    }
+
+    /* Startsektion */
+    #startingPage {
+        gap: 5vh;
+    }
+
+    #infoFrontPage {
+        font-size: 4vw;
+        width: 90%;
+    }
+
+    #startImg p {
+        font-size: 6vw;
+        padding: 0 1rem;
+    }
+
+    /* Ikoner */
+    #headerIcons {
+        gap: 3vh;
+    }
+
+    .headerIcon {
+        width: 40%;
+        font-size: 3.5vw;
+    }
+
+    /* Container & text */
+    .containerInfo {
+        flex-direction: column;
+        gap: 4vh;
+        align-items: center;
+    }
+
+    .containerTxt {
+        width: 90%;
+        gap: 3vh;
+    }
+
+    .SemiheaderFPage {
+        font-size: 5vw;
+    }
+
+    .brödTxt {
+        font-size: 4vw;
+        max-width: 100%;
+    }
+
+    .MellanstoraBilder>img {
+        max-width: 90%;
+    }
+
+    /* Produktsektionen */
+    #containerTopProdukt {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        height: auto;
+        gap: 5vh;
+    }
+
+    #imgDiv {
+        width: 90%;
+        height: auto;
+    }
+
+    #TopRightDiv {
+        width: 90%;
+    }
+
+    #titelProduct h1 {
+        font-size: 6vw;
+    }
+
+    #titelProduct p {
+        font-size: 4vw;
+    }
+
+    #produktInfo {
+        font-size: 4vw;
+        max-width: 100%;
+    }
+
+    #prisDiv {
+        font-size: 5vw;
+    }
+
+    /* Fakta-rutor */
+    #containerFaktaAlgrent {
+        flex-direction: column;
+        padding: 2rem 1rem;
+        gap: 3vh;
+        overflow-x: hidden;
+    }
+
+    .faktaRutor {
+        flex: 1 1 auto;
+        width: 100%;
+        flex-direction: column;
+        gap: 2vh;
+    }
+
+    .headerFaktaRutor {
+        font-size: 4.5vw;
+    }
+
+    .faktaBrödTxt {
+        font-size: 4vw;
+    }
+
+    /* FAQ */
+    .faqItem {
+        max-width: 100%;
+        height: auto;
+    }
+
+    .faqItemHeader {
+        width: 100%;
+    }
+
+    /* Footer */
+    footer {
+        flex-direction: column;
+        height: auto;
+        padding: 2rem 1rem;
+        text-align: center;
+    }
+
+    .contact {
+        font-size: 4vw;
+    }
+
+    /* Buttons */
+    #FormBottomBtn {
+        width: 100%;
+        font-size: 4vw;
+        padding: 12px;
+    }
 }

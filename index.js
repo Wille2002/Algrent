@@ -44,6 +44,7 @@ function orderPage(e) {
             </div>
 
             <div id="beställKnapp">
+                <button id="goBack">Tillbaka</button>
                 <div id="Pris">Totalbelopp:</div>
                 <button id="orderBtn">Beställ</button>
             </div>
