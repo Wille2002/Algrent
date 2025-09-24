@@ -136,8 +136,16 @@ function checkInput() {
 
         if (antal.valueAsNumber > 0) {
             console.log(antal.valueAsNumber);
-            document.getElementById("orderBtn").style.backgroundColor = "#45a049";
+            document.getElementById("orderBtn").style.backgroundColor = "#14532d";
             document.getElementById("orderBtn").disabled = false;
+            orderBtn.addEventListener("mouseenter", () => {
+                orderBtn.style.backgroundColor = "#45a049"; // hoverfärg
+              });
+              
+              // när musen lämnar
+              orderBtn.addEventListener("mouseleave", () => {
+                orderBtn.style.backgroundColor = "#14532d"; // tillbaka
+              });
         }
     }
 }

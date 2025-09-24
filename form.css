@@ -22,6 +22,7 @@
     border: none;
     background: #F6F6F6;
     outline: none;
+    width: 100%;
 }
 
 #info {
@@ -54,16 +55,6 @@
     justify-content: flex-end;
     gap: 5vw;
     align-items: center;
-}
-
-#beställKnapp button {
-    width: 12vw;
-    height: 4vw;
-    background: #589858;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    font-size: 20px;
 }
 
 main {
@@ -162,13 +153,13 @@ button.back:hover {
 
 
 button.confirm {
-    background: #1c7c4b;
+    background: #14532d;
     color: #fff;
     box-shadow: 0 4px 10px rgba(28, 124, 75, 0.25);
 }
 
 button.confirm:hover {
-    background: #145c37;
+    background: #45a049;
 }
 
 #Pris {
@@ -182,7 +173,9 @@ button.confirm:hover {
     border-bottom-color: rgb(204, 204, 204);
     border-left-color: rgb(204, 204, 204);
     color: #333;
+}
 
+#orderBtn {
     padding: 1vw;
     font-size: 20px;
     border-radius: 10px;
@@ -190,8 +183,19 @@ button.confirm:hover {
     border: none;
     transition: all 0.2s ease-in-out;
     font-weight: 500;
+
+    color: white;
+    width: 20vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
+
+#orderBtn:hover {
+    background-color: #45a049;
+    color: #fff;
+}
 
 /* ===== MOBILANPASSNING ===== */
 @media (max-width: 768px) {

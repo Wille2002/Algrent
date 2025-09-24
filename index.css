@@ -538,7 +538,7 @@ footer {
 
 #SäkerhetsbladBTN:hover {
     background-color: #45a049;
-    transform: scale(1.05);
+    transform: scale(1.03);
 }
 
 #startImg {
@@ -583,21 +583,25 @@ footer {
 
 
 #FormBottomBtn {
-    background-color: #14532D;
-    color: white;
-    padding: 12px 28px;
-    font-size: 18px;
-    font-weight: bold;
-    border: none;
+    padding: 1vw;
+    font-size: 20px;
     border-radius: 10px;
     cursor: pointer;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    transition: all 0.3s ease;
-    width: 30vw;
-
+    border: none;
+    transition: all 0.2s ease-in-out;
+    font-weight: 500;
+    background-color: #14532d;
+    color: white;
+    width: 20vw;
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+#FormBottomBtn:hover{
+    background-color: #45a049;
+  transform: scale(1.03);
+
 }
 
 #confirmPage {
