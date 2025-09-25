@@ -51,7 +51,13 @@ function orderPage(boolean, bolagsnamn, momRegNr, address, leveransaddress, pris
     </div>
 </div>
 `;
-
+document.querySelector("#antal").addEventListener("keypress", (e) => {
+        if (!/[0-9]/.test(e.key)) {
+          e.preventDefault();
+        }
+      });
+      console.log(document.querySelector("#antal"));
+      
     if(document.querySelector("footer")){
         document.querySelector("footer").remove();
     }
@@ -66,10 +72,13 @@ function orderPage(boolean, bolagsnamn, momRegNr, address, leveransaddress, pris
         window.open("https://www.algrentb2b.com");
         
     })
-    document.getElementById("antal").addEventListener("change", e => {
+    document.getElementById("antal").addEventListener("input", e => {
         console.log(e);
-
-        document.getElementById("Pris").innerHTML = `Totalbelopp: ${e.target.valueAsNumber * 1000}kr`
+        if(!e.target.valueAsNumber){
+            document.getElementById("Pris").innerHTML = `Totalbelopp: 0kr`
+        }else{
+            document.getElementById("Pris").innerHTML = `Totalbelopp: ${e.target.valueAsNumber * 1000}kr`
+        }
     })
     if(boolean){
         document.getElementById("bolagsnamn").value = bolagsnamn;
