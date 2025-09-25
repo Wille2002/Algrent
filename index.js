@@ -44,7 +44,7 @@ function orderPage(boolean, bolagsnamn, momRegNr, address, leveransaddress, pris
             </div>
 
             <div id="beställKnapp">
-                <button id="goBack">Tillbaka</button>
+                <button class="back"id="goBack">Tillbaka</button>
                 <div id="Pris">Totalbelopp:</div>
                 <button id="orderBtn">Beställ</button>
             </div>
