@@ -3,6 +3,7 @@ let orgNr;
 let address;
 let leveransaddress;
 let antal;
+let pris;
 
 function orderPage(boolean, bolagsnamn, momRegNr, address, leveransaddress, pris) {
     document.querySelector("main").innerHTML = `
@@ -51,14 +52,14 @@ function orderPage(boolean, bolagsnamn, momRegNr, address, leveransaddress, pris
     </div>
 </div>
 `;
-document.querySelector("#antal").addEventListener("keypress", (e) => {
+    document.querySelector("#antal").addEventListener("keypress", (e) => {
         if (!/[0-9]/.test(e.key)) {
-          e.preventDefault();
+            e.preventDefault();
         }
-      });
-      console.log(document.querySelector("#antal"));
-      
-    if(document.querySelector("footer")){
+    });
+    console.log(document.querySelector("#antal"));
+
+    if (document.querySelector("footer")) {
         document.querySelector("footer").remove();
     }
     document.getElementById("orderBtn").addEventListener("click", showForm);
@@ -70,17 +71,17 @@ document.querySelector("#antal").addEventListener("keypress", (e) => {
     });
     document.getElementById("goBack").addEventListener("click", e => {
         window.open("https://www.algrentb2b.com");
-        
+
     })
     document.getElementById("antal").addEventListener("input", e => {
         console.log(e);
-        if(!e.target.valueAsNumber){
+        if (!e.target.valueAsNumber) {
             document.getElementById("Pris").innerHTML = `Totalbelopp: 0kr`
-        }else{
+        } else {
             document.getElementById("Pris").innerHTML = `Totalbelopp: ${e.target.valueAsNumber * 1000}kr`
         }
     })
-    if(boolean){
+    if (boolean) {
         document.getElementById("bolagsnamn").value = bolagsnamn;
         document.getElementById("orgNr").value = momRegNr;
         document.getElementById("address").value = address;
@@ -92,11 +93,12 @@ document.querySelector("#antal").addEventListener("keypress", (e) => {
 
 function showForm(e) {
     e.preventDefault();
-    let bolagsnamn = document.getElementById("bolagsnamn").value;
-    let orgNr = document.getElementById("orgNr").value;
-    let address = document.getElementById("address").value;
-    let leveransaddress = document.getElementById("leveransaddress").value;
-    let antal = document.getElementById("antal").value;
+    bolagsnamn = document.getElementById("bolagsnamn").value;
+    orgNr = document.getElementById("orgNr").value;
+    address = document.getElementById("address").value;
+    leveransaddress = document.getElementById("leveransaddress").value;
+    antal = document.getElementById("antal").value;
+    pris = antal * 1000;
 
 
     document.querySelector("main").innerHTML = `
@@ -163,12 +165,12 @@ function checkInput() {
             document.getElementById("orderBtn").disabled = false;
             orderBtn.addEventListener("mouseenter", () => {
                 orderBtn.style.backgroundColor = "#45a049"; // hoverfärg
-              });
-              
-              // när musen lämnar
-              orderBtn.addEventListener("mouseleave", () => {
+            });
+
+            // när musen lämnar
+            orderBtn.addEventListener("mouseleave", () => {
                 orderBtn.style.backgroundColor = "#14532d"; // tillbaka
-              });
+            });
         }
     }
 }
@@ -178,15 +180,12 @@ function sendMail(e) {
     alert("Tack! Din order är bekräftad!");
 
     emailjs.send("", "", {
-        order_id: 1,
-        orders: 1,
         bolagsnamn: bolagsnamn,
         orgNr: orgNr,
         address: address,
         leveransaddress: leveransaddress,
         antal: antal,
-        price: "--",
-        cost: "--",
+        pris: pris,
         email: ""
     })
         .then(() => {
