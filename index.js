@@ -110,7 +110,7 @@ function showForm(e) {
       <h3>Bolagsnamn</h3>
       <p>${bolagsnamn}</p>
 
-      <h3>Organisationsnummer</h3>
+      <h3>Momreg. nummer</h3>
       <p>${orgNr}</p>
 
       <h3>Address</h3>
