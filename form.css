@@ -69,7 +69,6 @@ main {
 
 body {
     margin: 0;
-    font-family: "Inter", Arial, sans-serif;
     background-color: #f9fcfb;
     color: #222;
 }
@@ -195,8 +194,6 @@ button.confirm:hover {
 
 /* ===== MOBILANPASSNING ===== */
 @media (max-width: 768px) {
-
-    /* Formulär-sidan */
     #formPage {
         flex-direction: column;
         justify-content: flex-start;
@@ -239,7 +236,6 @@ button.confirm:hover {
         width: 100%;
     }
 
-    /* Knappsektionen */
     #beställKnapp {
         flex-direction: column;
         align-items: center;
@@ -258,7 +254,6 @@ button.confirm:hover {
         font-size: 4.5vw;
     }
 
-    /* Bekräftelse-sidan */
     .confirmOrder {
         width: 90%;
         height: auto;
@@ -291,7 +286,6 @@ button.confirm:hover {
         padding: 0.5rem;
     }
 
-    /* Knappgrupp */
     .button-group {
         flex-direction: column;
         gap: 1rem;

@@ -8,7 +8,7 @@ let pris;
 function orderPage(boolean, bolagsnamn, momRegNr, address, leveransaddress, pris) {
     document.querySelector("main").innerHTML = `
 <div id="formPage">
-    <img src="./img/image0.jpeg" alt="">
+    <img src="https://algrentb2b.com/image0.jpeg" alt="">
     <div id="formContainer">
 
         <div id="info">Beställ Algrent i 5 litersdunkar för företag och organisationer genom att svara på
@@ -57,7 +57,6 @@ function orderPage(boolean, bolagsnamn, momRegNr, address, leveransaddress, pris
             e.preventDefault();
         }
     });
-    console.log(document.querySelector("#antal"));
 
     if (document.querySelector("footer")) {
         document.querySelector("footer").remove();
@@ -70,11 +69,10 @@ function orderPage(boolean, bolagsnamn, momRegNr, address, leveransaddress, pris
         item.addEventListener("input", checkInput);
     });
     document.getElementById("goBack").addEventListener("click", e => {
-        window.open("https://www.algrentb2b.com");
+        window.open("https://www.algrentb2b.com", "_self");
 
     })
     document.getElementById("antal").addEventListener("input", e => {
-        console.log(e);
         if (!e.target.valueAsNumber) {
             document.getElementById("Pris").innerHTML = `Totalbelopp: 0kr`
         } else {
@@ -99,7 +97,6 @@ function showForm(e) {
     leveransaddress = document.getElementById("leveransaddress").value;
     antal = document.getElementById("antal").value;
     pris = antal * 1000;
-
 
     document.querySelector("main").innerHTML = `
         <div class="container">
@@ -132,53 +129,39 @@ function showForm(e) {
     </div>
   </div>
 `;
-
-
     document.getElementById("tillbakaKnapp").addEventListener("click", () => {
         orderPage(true, bolagsnamn, orgNr, address, leveransaddress, antal)
     });
-
-
     document.getElementById("bekräftaKnapp").addEventListener("click", sendMail)
 };
 
 function checkInput() {
     let counter = 0;
-
     document.querySelectorAll("#inputContainer input").forEach(item => {
         if (item.value.trim() !== "") {
             counter++;
-            console.log(counter);
         }
     });
 
     let antal = document.getElementById("antal");
-
-
-    console.log(antal);
     if (counter == 4) {
-        console.log("yes");
 
         if (antal.valueAsNumber > 0) {
-            console.log(antal.valueAsNumber);
             document.getElementById("orderBtn").style.backgroundColor = "#14532d";
             document.getElementById("orderBtn").disabled = false;
             orderBtn.addEventListener("mouseenter", () => {
-                orderBtn.style.backgroundColor = "#45a049"; // hoverfärg
+                orderBtn.style.backgroundColor = "#45a049"; 
             });
 
-            // när musen lämnar
             orderBtn.addEventListener("mouseleave", () => {
-                orderBtn.style.backgroundColor = "#14532d"; // tillbaka
+                orderBtn.style.backgroundColor = "#14532d"; 
             });
         }
     }
 }
 
-
 function sendMail(e) {
     alert("Tack! Din order är bekräftad!");
-
     emailjs.send("", "", {
         bolagsnamn: bolagsnamn,
         orgNr: orgNr,
@@ -186,7 +169,7 @@ function sendMail(e) {
         leveransaddress: leveransaddress,
         antal: antal,
         pris: pris,
-        email: ""
+        email: "muficcalle@gmail.com"
     })
         .then(() => {
         })
@@ -194,9 +177,7 @@ function sendMail(e) {
             console.error("Något gick fel:", error);
             alert("Fel vid skickande av mejl. Försök igen.");
         });
-
     alert("Tack! Din order är bekräftad!");
-
 };
 
 const reveals = document.querySelectorAll(".scroll-reveal");
@@ -215,17 +196,11 @@ function revealOnScroll() {
 window.addEventListener("scroll", revealOnScroll);
 window.addEventListener("load", revealOnScroll);
 
-
-
-
 function initFAQ(selector) {
     const faqItems = document.querySelectorAll(selector);
 
     faqItems.forEach(item => {
         item.addEventListener("click", () => {
-
-
-
             document.querySelectorAll(".faqAnswer").forEach(item => {
                 item.addEventListener("click", e => {
                     if (item.classList.contains("active")) {
@@ -240,25 +215,14 @@ function initFAQ(selector) {
                     }
                 })
             })
-
-            //item.classList.toggle("active");
-
-            // Toggle active on its sibling faqAnswer
             const answer = item.parentElement.querySelector(".faqAnswer");
             if (answer) answer.classList.toggle("active");
         });
     });
 }
 
-
-
-// Initialize only on .faqItem
 initFAQ(".faqItem");
-
-
-
 window.scrollTo(0, 0);
-
 document.querySelector("#logoAlgrent").addEventListener("click", e => {
 
 })

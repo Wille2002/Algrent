@@ -2,7 +2,7 @@
 
 @font-face {
     font-family: 'MyFont';
-    src: url('Fonts/Raleway-Regular.ttf') format('woff2');
+    src: url('https://www.algrentb2b.com/Raleway-Regular.ttf') format('woff2');
     font-weight: normal;
     font-style: normal;
 }
@@ -17,16 +17,13 @@ body {
     background-color: #fefffe;
     margin: 0;
     overflow-x: hidden;
-    /* för säkerhets skull */
 }
 
-/* Logo */
 #logoAlgrent {
     width: 164px;
     height: auto;
 }
 
-/* Header */
 header {
     background-color: #f9fcfb;
     display: flex;
@@ -55,14 +52,12 @@ header {
     cursor: pointer;
 }
 
-/* Startsektion */
 #startingPage {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     width: 100%;
-    /* ändrat från 100vw */
     gap: 11vh;
 }
 
@@ -81,7 +76,6 @@ header {
     width: 60%;
 }
 
-/* Containers */
 .containerInfo {
     display: flex;
     justify-content: center;
@@ -89,7 +83,6 @@ header {
     flex-direction: row;
     gap: 5vw;
     flex-wrap: wrap;
-    /* mer responsiv */
 }
 
 .containerTxt {
@@ -115,7 +108,6 @@ header {
     height: auto;
 }
 
-/* Länkar */
 .läsMer {
     color: #589858;
     font-size: 1.5vw;
@@ -123,7 +115,6 @@ header {
     cursor: pointer;
 }
 
-/* Footer */
 footer {
     background-color: #eaeaea;
     height: 30vh;
@@ -133,7 +124,6 @@ footer {
     align-items: center;
 }
 
-/* Dropdown */
 .menuItem {
     position: relative;
     display: flex;
@@ -170,7 +160,6 @@ footer {
     pointer-events: auto;
 }
 
-/* Scroll reveal */
 .scroll-reveal {
     opacity: 0;
     transform: translateY(60px);
@@ -189,13 +178,10 @@ footer {
     align-self: center;
 }
 
-/* Fakta container */
 #containerFaktaAlgrent {
     display: flex;
     flex-direction: row;
-    /* radlayout */
     flex-wrap: nowrap;
-    /* inga brytningar */
     gap: 2rem;
     width: 100%;
     justify-content: space-evenly;
@@ -205,31 +191,24 @@ footer {
     color: white;
     overflow-x: auto;
     align-items: center;
-    /* om det blir för många rutor kan man scrolla sidledes */
 }
 
 .faktaRutor {
     flex: 0 0 300px;
-    /* alla boxar lika breda som standard */
     transition: all 0.4s ease;
 }
 
-/* När en är öppen */
 .faktaRutor.open {
     flex: 1;
-    /* tar allt tillgängligt space åt höger */
     max-width: 100%;
 }
 
-/* Ikoner */
 #headerIcons {
     display: flex;
     width: 100%;
-    /* ändrat från 100vw */
     justify-content: center;
     gap: 5vw;
     flex-wrap: wrap;
-    /* för mobil */
 }
 
 .headerIcon {
@@ -243,7 +222,6 @@ footer {
     font-weight: bold;
 }
 
-/* Produkt */
 #titelProduct {
     display: flex;
     flex-direction: column;
@@ -296,8 +274,6 @@ footer {
     gap: 20px;
     height: 30vh;
 }
-
-
 
 #containerProdukt {
     display: flex;
@@ -418,7 +394,6 @@ footer {
 
 .faqItem.active .faqAnswer {
     display: block;
-    /* visas när man klickat */
 }
 
 #containerProdukt {
@@ -435,7 +410,6 @@ footer {
 
 .faqIcon.active .faqAnswer {
     display: block;
-    /* visas när man klickat */
 }
 
 #midLeft {
@@ -477,14 +451,9 @@ footer {
     flex: 0 0 300px;
     transition: all 0.4s ease;
     cursor: pointer;
-
     display: flex;
-    /* radlayout */
     flex-direction: row;
-    /* två kolumner */
     align-items: flex-start;
-
-
 }
 
 .faktaRutor.open {
@@ -493,16 +462,12 @@ footer {
     gap: 5vw;
 }
 
-/* Vänsterkolumn */
 .faqContentLeft {
     flex: 0 0 300px;
-    /* fast bredd */
     display: flex;
     flex-direction: column;
     gap: 3.7vh;
 }
-
-
 
 .faqItem .faqAnswer {
     display: none;
@@ -565,15 +530,10 @@ footer {
 #startImg p {
     position: absolute;
     top: 42%;
-    /* mitten på höjden */
     left: 50%;
-    /* mitten på bredden */
     transform: translate(-50%, -50%);
-    /* exakt centrerat */
     color: white;
-    /* syns mot bilden */
     font-size: 3vw;
-    /* större text */
     font-weight: 1000;
     text-align: center;
     text-shadow: 0 4px 8px black;
@@ -618,8 +578,6 @@ footer {
     height: 100vh;
 }
 
-
-
 #goBack {
     border: 1.5px solid #ccc;
     border-top-color: rgb(204, 204, 204);
@@ -633,8 +591,6 @@ footer {
 
 /* ===== MOBILANPASSNING ===== */
 @media (max-width: 768px) {
-
-    /* Header */
     header {
         flex-direction: row;
         justify-content: space-between;
@@ -652,7 +608,6 @@ footer {
         font-size: 4vw;
     }
 
-    /* Startsektion */
     #startingPage {
         gap: 5vh;
     }
@@ -667,7 +622,6 @@ footer {
         padding: 0 1rem;
     }
 
-    /* Ikoner */
     #headerIcons {
         gap: 3vh;
     }
@@ -677,12 +631,21 @@ footer {
         font-size: 3.5vw;
     }
 
-    /* Container & text */
     .containerInfo {
+        display: flex;
         flex-direction: column;
         gap: 4vh;
         align-items: center;
-    }
+      }
+    
+      .containerInfo .MellanstoraBilder {
+        order: -1; 
+        max-width: 90%;
+      }
+    
+      .containerInfo .containerTxt {
+        width: 90%;
+      }
 
     .containerTxt {
         width: 90%;
@@ -699,10 +662,9 @@ footer {
     }
 
     .MellanstoraBilder>img {
-        max-width: 90%;
+        max-width: 100%;
     }
 
-    /* Produktsektionen */
     #containerTopProdukt {
         flex-direction: column;
         align-items: center;
@@ -737,7 +699,6 @@ footer {
         font-size: 5vw;
     }
 
-    /* Fakta-rutor */
     #containerFaktaAlgrent {
         flex-direction: column;
         padding: 2rem 1rem;
@@ -760,7 +721,6 @@ footer {
         font-size: 4vw;
     }
 
-    /* FAQ */
     .faqItem {
         max-width: 100%;
         height: auto;
@@ -770,7 +730,6 @@ footer {
         width: 100%;
     }
 
-    /* Footer */
     footer {
         flex-direction: column;
         height: auto;
@@ -782,10 +741,12 @@ footer {
         font-size: 4vw;
     }
 
-    /* Buttons */
     #FormBottomBtn {
         width: 100%;
         font-size: 4vw;
         padding: 12px;
+    }
+    #produktFakta h1{
+        font-size: 6vw;
     }
 }
