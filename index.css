@@ -260,6 +260,7 @@ footer {
     width: 100%;
     gap: 10%;
     align-items: center;
+    font-size: 1.3vw;
 }
 
 .headerFaktaRutor {

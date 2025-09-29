@@ -228,11 +228,14 @@ function initFAQ(selector) {
 
         document.querySelectorAll(selector).forEach(r => {
           if (r !== item) r.classList.add("hidden");
+          
         });
 
-        dropDown.querySelector("div").textContent = "Läs mindre";
+        dropDown.querySelector("div").innerHTML = "Läs mindre";
+        
       } else {
         dropDown.querySelector("div").textContent = "Läs mer";
+        
       }
     });
   });
