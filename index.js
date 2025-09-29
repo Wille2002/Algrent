@@ -52,6 +52,7 @@ function orderPage(boolean, bolagsnamn, momRegNr, address, leveransaddress, pris
     </div>
 </div>
 `;
+    window.scrollTo({ top: 0, behavior: "smooth" });
     document.querySelector("#antal").addEventListener("keypress", (e) => {
         if (!/[0-9]/.test(e.key)) {
             e.preventDefault();
@@ -150,11 +151,11 @@ function checkInput() {
             document.getElementById("orderBtn").style.backgroundColor = "#14532d";
             document.getElementById("orderBtn").disabled = false;
             orderBtn.addEventListener("mouseenter", () => {
-                orderBtn.style.backgroundColor = "#45a049"; 
+                orderBtn.style.backgroundColor = "#45a049";
             });
 
             orderBtn.addEventListener("mouseleave", () => {
-                orderBtn.style.backgroundColor = "#14532d"; 
+                orderBtn.style.backgroundColor = "#14532d";
             });
         }
     }
@@ -203,41 +204,40 @@ document.querySelector("#logoAlgrent").addEventListener("click", e => {
 })
 
 function initFAQ(selector) {
-  const faqItems = document.querySelectorAll(selector);
+    const faqItems = document.querySelectorAll(selector);
 
-  faqItems.forEach(item => {
-    const dropDown = item.querySelector(".dropDownFact");
-    const answer = item.querySelector(".faqAnswer");
+    faqItems.forEach(item => {
+        const dropDown = item.querySelector(".dropDownFact");
+        const answer = item.querySelector(".faqAnswer");
 
-    if (!dropDown || !answer) return;
+        if (!dropDown || !answer) return;
 
-    dropDown.addEventListener("click", e => {
-      e.stopPropagation();
+        dropDown.addEventListener("click", e => {
+            e.stopPropagation();
 
-      const isOpen = answer.classList.contains("active");
-      document.querySelectorAll(".faqAnswer.active").forEach(openAns => {
-        openAns.classList.remove("active");
-        openAns.style.maxHeight = 0;
-      });
+            const isOpen = answer.classList.contains("active");
+            document.querySelectorAll(".faqAnswer.active").forEach(openAns => {
+                openAns.classList.remove("active");
+                openAns.style.maxHeight = 0;
+            });
 
-      document.querySelectorAll(selector).forEach(r => r.classList.remove("hidden"));
+            document.querySelectorAll(selector).forEach(r => r.classList.remove("hidden"));
 
-      if (!isOpen) {
-        answer.classList.add("active");
-        answer.style.maxHeight = answer.scrollHeight + "px";
+            if (!isOpen) {
+                answer.classList.add("active");
+                answer.style.maxHeight = answer.scrollHeight + "px";
 
-        document.querySelectorAll(selector).forEach(r => {
-          if (r !== item) r.classList.add("hidden");
+                document.querySelectorAll(selector).forEach(r => {
+                    if (r !== item) r.classList.add("hidden");
+                });
+
+                dropDown.querySelector("div").textContent = "Läs mindre";
+            } else {
+                dropDown.querySelector("div").textContent = "Läs mer";
+            }
         });
-
-        dropDown.querySelector("div").textContent = "Läs mindre";
-      } else {
-        dropDown.querySelector("div").textContent = "Läs mer";
-      }
     });
-  });
 }
 
 initFAQ(".faktaRutor");
 
-  
