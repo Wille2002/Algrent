@@ -1,12 +1,13 @@
 let bolagsnamn;
 let orgNr;
 let address;
+let postadress;
 let leveransaddress;
 let antal;
 let pris;
 let email;
 
-function orderPage(boolean, bolagsnamn, momRegNr, address, leveransaddress, pris, email) {
+function orderPage(boolean, bolagsnamn, momRegNr, address, postadress, leveransaddress, pris, email) {
     document.querySelector("main").innerHTML = `
 <div id="formPage">
     <img src="https://algrentb2b.com/image0.jpeg" alt="">
@@ -30,14 +31,26 @@ function orderPage(boolean, bolagsnamn, momRegNr, address, leveransaddress, pris
             </div>
             <div class="input">
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M12 10.9C11.39 10.9 10.9 11.39 10.9 12C10.9 12.61 11.39 13.1 12 13.1C12.61 13.1 13.1 12.61 13.1 12C13.1 11.39 12.61 10.9 12 10.9ZM12 2C6.48 2 2 6.48 2 12C2 17.52 6.48 22 12 22C17.52 22 22 17.52 22 12C22 6.48 17.52 2 12 2ZM14.19 14.19L6 18L9.81 9.81L18 6L14.19 14.19Z" fill="black"/></svg>
-                <input id="address" type="text" placeholder="Address">
+                <input id="address" type="text" placeholder="Adress">
             </div>
             <div class="input">
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M12 10.9C11.39 10.9 10.9 11.39 10.9 12C10.9 12.61 11.39 13.1 12 13.1C12.61 13.1 13.1 12.61 13.1 12C13.1 11.39 12.61 10.9 12 10.9ZM12 2C6.48 2 2 6.48 2 12C2 17.52 6.48 22 12 22C17.52 22 22 17.52 22 12C22 6.48 17.52 2 12 2ZM14.19 14.19L6 18L9.81 9.81L18 6L14.19 14.19Z" fill="black"/></svg>
-                <input id="leveransaddress" type="text" placeholder="Leveransaddress">
+                <input id="postAddress" type="text" placeholder="Postadress">
             </div>
             <div class="input">
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M12 10.9C11.39 10.9 10.9 11.39 10.9 12C10.9 12.61 11.39 13.1 12 13.1C12.61 13.1 13.1 12.61 13.1 12C13.1 11.39 12.61 10.9 12 10.9ZM12 2C6.48 2 2 6.48 2 12C2 17.52 6.48 22 12 22C17.52 22 22 17.52 22 12C22 6.48 17.52 2 12 2ZM14.19 14.19L6 18L9.81 9.81L18 6L14.19 14.19Z" fill="black"/></svg>
+                <input id="leveransaddress" type="text" placeholder="Leveransadress">
+            </div>
+            <div class="input">
+                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="24" height="24" viewBox="0 0 260 300" xml:space="preserve">
+<g style="stroke: none; stroke-width: 0; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: none; fill-rule: nonzero; opacity: 1;" transform="translate(1.4065934065934016 1.4065934065934016) scale(2.81 2.81)">
+	<circle cx="45" cy="45" r="45" style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: rgb(0,0,0); fill-rule: nonzero; opacity: 1;" transform="  matrix(1 0 0 1 0 0) "/>
+	<polygon points="21.07,31.48 36.59,45.44 21.07,58.53 " style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: rgb(255,255,255); fill-rule: nonzero; opacity: 1;" transform="  matrix(1 0 0 1 0 0) "/>
+	<polygon points="45,48.97 23.68,29.79 66.32,29.79 " style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: rgb(255,255,255); fill-rule: nonzero; opacity: 1;" transform="  matrix(1 0 0 1 0 0) "/>
+	<path d="M 38.842 47.465 l 5.155 4.637 c 0.286 0.257 0.645 0.385 1.003 0.385 s 0.718 -0.128 1.003 -0.385 l 5.155 -4.637 l 15.1 12.743 H 23.741 L 38.842 47.465 z" style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: rgb(255,255,255); fill-rule: nonzero; opacity: 1;" transform=" matrix(1 0 0 1 0 0) " stroke-linecap="round"/>
+	<polygon points="53.41,45.44 68.93,31.48 68.93,58.53 " style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: rgb(255,255,255); fill-rule: nonzero; opacity: 1;" transform="  matrix(1 0 0 1 0 0) "/>
+</g>
+</svg>
                 <input id="Email" type="text" placeholder="Email">
             </div>
 
@@ -89,6 +102,7 @@ function orderPage(boolean, bolagsnamn, momRegNr, address, leveransaddress, pris
         document.getElementById("bolagsnamn").value = bolagsnamn;
         document.getElementById("orgNr").value = momRegNr;
         document.getElementById("address").value = address;
+        document.getElementById("address").value = postadress;
         document.getElementById("leveransaddress").value = leveransaddress;
         document.getElementById("antal").value = pris;
         document.getElementById("orderBtn").disabled = false;
@@ -101,6 +115,7 @@ function showForm(e) {
     bolagsnamn = document.getElementById("bolagsnamn").value;
     orgNr = document.getElementById("orgNr").value;
     address = document.getElementById("address").value;
+    postadress = document.getElementById("postAddress").value;
     leveransaddress = document.getElementById("leveransaddress").value;
     antal = document.getElementById("antal").value;
     pris = antal * 1000;
@@ -120,6 +135,9 @@ function showForm(e) {
 
       <h3>Address</h3>
       <p>${address}</p>
+
+      <h3>Postadress</h3>
+      <p>${postadress}</p>
 
       <h3>Leveransadress</h3>
       <p>${leveransaddress}</p>
@@ -141,7 +159,7 @@ function showForm(e) {
   </div>
 `;
     document.getElementById("tillbakaKnapp").addEventListener("click", () => {
-        orderPage(true, bolagsnamn, orgNr, address, leveransaddress, antal, email)
+        orderPage(true, bolagsnamn, orgNr, address, postadress, leveransaddress, antal, email)
     });
     document.getElementById("bekräftaKnapp").addEventListener("click", sendMail)
 };
@@ -155,7 +173,7 @@ function checkInput() {
     });
 
     let antal = document.getElementById("antal");
-    if (counter == 5) {
+    if (counter == 6) {
 
         if (antal.valueAsNumber > 0) {
             document.getElementById("orderBtn").style.backgroundColor = "#14532d";
@@ -173,17 +191,16 @@ function checkInput() {
 
 function sendMail(e) {
     alert("Tack! Din order är bekräftad!");
-    emailjs.send("service_ziiu2ec", "template_e8cphfg", {
+    emailjs.send("", {
         bolagsnamn: bolagsnamn,
         orgNr: orgNr,
         address: address,
-        //postadress
-        //email
+        postadress: postadress,
         leveransaddress: leveransaddress,
+        Email: email,
         antal: antal,
         pris: pris,
-        Email: email,
-        email: "muficcalle@gmail.com"
+        email: "b2b@algrent.com"
     })
         .then(() => {
         })
