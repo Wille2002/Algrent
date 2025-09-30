@@ -4,8 +4,9 @@ let address;
 let leveransaddress;
 let antal;
 let pris;
+let email;
 
-function orderPage(boolean, bolagsnamn, momRegNr, address, leveransaddress, pris) {
+function orderPage(boolean, bolagsnamn, momRegNr, address, leveransaddress, pris, email) {
     document.querySelector("main").innerHTML = `
 <div id="formPage">
     <img src="https://algrentb2b.com/image0.jpeg" alt="">
@@ -34,6 +35,10 @@ function orderPage(boolean, bolagsnamn, momRegNr, address, leveransaddress, pris
             <div class="input">
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M12 10.9C11.39 10.9 10.9 11.39 10.9 12C10.9 12.61 11.39 13.1 12 13.1C12.61 13.1 13.1 12.61 13.1 12C13.1 11.39 12.61 10.9 12 10.9ZM12 2C6.48 2 2 6.48 2 12C2 17.52 6.48 22 12 22C17.52 22 22 17.52 22 12C22 6.48 17.52 2 12 2ZM14.19 14.19L6 18L9.81 9.81L18 6L14.19 14.19Z" fill="black"/></svg>
                 <input id="leveransaddress" type="text" placeholder="Leveransaddress">
+            </div>
+            <div class="input">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M12 10.9C11.39 10.9 10.9 11.39 10.9 12C10.9 12.61 11.39 13.1 12 13.1C12.61 13.1 13.1 12.61 13.1 12C13.1 11.39 12.61 10.9 12 10.9ZM12 2C6.48 2 2 6.48 2 12C2 17.52 6.48 22 12 22C17.52 22 22 17.52 22 12C22 6.48 17.52 2 12 2ZM14.19 14.19L6 18L9.81 9.81L18 6L14.19 14.19Z" fill="black"/></svg>
+                <input id="Email" type="text" placeholder="Email">
             </div>
 
         </div>
@@ -87,6 +92,7 @@ function orderPage(boolean, bolagsnamn, momRegNr, address, leveransaddress, pris
         document.getElementById("leveransaddress").value = leveransaddress;
         document.getElementById("antal").value = pris;
         document.getElementById("orderBtn").disabled = false;
+        document.getElementById("Email").value = email;
     }
 }
 
@@ -98,6 +104,7 @@ function showForm(e) {
     leveransaddress = document.getElementById("leveransaddress").value;
     antal = document.getElementById("antal").value;
     pris = antal * 1000;
+    email = document.getElementById("Email").value;
 
     document.querySelector("main").innerHTML = `
         <div class="container">
@@ -122,6 +129,9 @@ function showForm(e) {
 
       <h3>Pris</h3>
       <p>${antal * 1000}kr</p>
+
+      <h3>Email</h3>
+      <p>${email}</p>
     </div>
 
     <div class="button-group">
@@ -131,7 +141,7 @@ function showForm(e) {
   </div>
 `;
     document.getElementById("tillbakaKnapp").addEventListener("click", () => {
-        orderPage(true, bolagsnamn, orgNr, address, leveransaddress, antal)
+        orderPage(true, bolagsnamn, orgNr, address, leveransaddress, antal, email)
     });
     document.getElementById("bekräftaKnapp").addEventListener("click", sendMail)
 };
@@ -145,7 +155,7 @@ function checkInput() {
     });
 
     let antal = document.getElementById("antal");
-    if (counter == 4) {
+    if (counter == 5) {
 
         if (antal.valueAsNumber > 0) {
             document.getElementById("orderBtn").style.backgroundColor = "#14532d";
@@ -172,6 +182,7 @@ function sendMail(e) {
         leveransaddress: leveransaddress,
         antal: antal,
         pris: pris,
+        Email: email,
         email: "muficcalle@gmail.com"
     })
         .then(() => {
