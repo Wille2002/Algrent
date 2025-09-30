@@ -163,10 +163,12 @@ function checkInput() {
 
 function sendMail(e) {
     alert("Tack! Din order är bekräftad!");
-    emailjs.send("", "", {
+    emailjs.send("service_ziiu2ec", "template_e8cphfg", {
         bolagsnamn: bolagsnamn,
         orgNr: orgNr,
         address: address,
+        //postadress
+        //email
         leveransaddress: leveransaddress,
         antal: antal,
         pris: pris,
